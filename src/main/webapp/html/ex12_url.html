@@ -1,0 +1,55 @@
+<!--
+	▶ 예시
+	
+		▷ http://localhost:8090/client/html/ex12_url.html
+		▷ http://www.naver.com:80
+		▷ https://www.naver.com:443
+		
+	▶ 구성 요소
+
+		▷ http://, https:// : 프로토콜
+		▷ localhost(127.0.0.1), www.naver.com : 호스트명
+		▷ 8090, 80, 443 : 포트 번호
+		▷ /client/html/ex12_url.html : 자원 경로
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ex12_url</title>
+	</head>
+	<body background="https://media.tenor.com/ykaBF7v0ivMAAAAM/%EC%B6%98%EC%8B%9D%EC%9D%B4-%EC%B6%98%EC%8B%9D.gif">
+		<h1>URL(URI)</h1>
+		
+		<h2>상대 경로</h2>
+		
+		<ul>
+			<li><a href="./ex12_url.html">12번 예제</a></li>
+			<li><a href="./member/member.html">member.html</a></li>
+			<li><a href="./admin/admin.html">admin.html</a></li>
+			<li><a href="./member/auth/auth.html">auth.html</a></li>
+		</ul>
+		
+		<h2>절대 경로</h2>
+		
+		<ul>
+			<li><a href="/client/html/ex12_url.html">12번 예제</a></li>
+			<li><a href="/client/html/member/member.html">member.html</a></li>
+			<li><a href="/client/html/admin/admin.html">admin.html</a></li>
+			<li><a href="/client/html/member/auth/auth.html">auth.html</a></li>
+		</ul>
+		
+		<h2>로컬 경로</h2>
+		
+		<ul>
+			<li><a href="C:\class\code\client\ClientTest\src\main\webapp\html\ex11_link.html">11번 예제</a></li>
+		</ul>
+		
+		<h2>외부 경로</h2>
+		
+		<ul>
+			<li><a href="https://www.google.com">구글</a></li>
+		</ul>
+	</body>
+</html>
