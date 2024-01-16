@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ex18_form</title>
+	</head>
+	<body>
+		<h1>데이터 입력 및 전송</h1>
+		
+		<form method="GET" action="ex18_server.jsp">
+			나이 <input type="text" name="age" autofocus> <input type="submit" value="전송">
+		</form>
+		
+		<hr>
+		
+		<form method="POST" action="ex18_server.jsp">
+			이름 <input type="text" name="name" size="20" maxlength="5" value="Hong" autocomplete="off" accesskey="s">
+			
+			<hr>
+
+			암호 <input type="password">
+			
+			<hr>
+
+			소개
+			
+			<textarea cols="50" rows="5" style="resize: none;">
+				안녕하세요.
+반갑습니다.
+저는 홍길동입니다.
+			</textarea>
+
+			<hr>
+			
+			취미
+			
+			<input type="checkbox" id="hobby1" checked><label for="hobby1">독서</label>
+			<input type="checkbox" id="hobby2"><label for="hobby2">운동</label>
+			<input type="checkbox" id="hobby3"><label>청소</label>
+			
+			<hr>
+
+			<input type="radio" name="gender"> 남자
+			<input type="radio" name="gender"> 여자
+			<input type="radio" name="gender" checked> 선택안함
+			
+			<hr>
+			
+			애완동물
+			
+			<select>
+				<option>강아지</option>
+				<option>고양이</option>
+				<option>병아리</option>
+			</select>
+			
+			<hr>
+			
+			애완동물
+			
+			<select size="5" multiple>
+				<option>강아지</option>
+				<option>고양이</option>
+				<option>병아리</option>
+			</select>
+			
+			<hr>
+			
+			학습 내용
+			
+			<select>
+				<optgroup label="Java">
+					<option>Class</option>
+					<option>Method</option>
+					<option>Array</option>
+				</optgroup>
+				<optgroup label="Oracle">
+					<option>TABLE</option>
+					<option>Sub Query</option>
+					<option>JOIN</option>
+					<option>PROCEDURE</option>
+				</optgroup>
+				<optgroup label="HTML">
+					<option>Tag</option>
+					<option>Entity</option>
+					<option>PCDATA</option>
+				</optgroup>
+			</select>
+			
+			<hr>
+
+			파일 선택 <input type="file">
+			
+			<hr>
+			
+			<input type="hidden" name="hidden" value="홍길동">
+			
+			<hr>
+			
+			<input type="submit" value="전송"> <input type="reset" value="초기화">
+			
+			<br>
+			<br>
+			
+			<input type="image" src="./images/button.png">
+			
+			<br>
+			<br>
+			
+			<input type="button" value="네이버" onclick="location.href='http://naver.com';">
+			
+			<br>
+			<br>
+			
+			<button type="button" style="display: flex; align-items: center;"><img src="./images/button.png">버튼</button>
+		</form>
+	</body>
+</html>
