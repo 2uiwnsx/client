@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex18_box</title>
+        <style>
+            #list {
+                width: 800px;
+                border: 1px solid gray;
+                border-collapse: collapse;
+                margin-top: -5px;
+            }
+            #list th, #list td {
+                border: 1px solid gray;
+                padding: 5px;
+            }
+            #list th {
+                background-color: #CCC;
+            }
+            #list #col1, #list #col3 {
+                width: 50;
+            }
+            #list #col2 {
+                width: 100;
+            }
+            #list #col4 {
+                width: 60;
+            }
+            #list #col5 {
+                width: auto;
+            }
+            #list .cell1, #list .cell2, #list .cell3, #list .cell4 {
+                text-align: center;
+            }
+            #list .cell5 {
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>주소록</h1>
+
+        <table id="list">
+            <tr>
+                <th id="col1">번호</th>
+                <th id="col2">이름</th>
+                <th id="col3">나이</th>
+                <th id="col4">성별</th>
+                <th id="col5">주소</th>
+            </tr>
+            <tr>
+                <td class="cell1">01</td>
+                <td class="cell2">Lorem</td>
+                <td class="cell3">21</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+                <td class="cell1">02</td>
+                <td class="cell2">Sint</td>
+                <td class="cell3">22</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Laudantium soluta consequuntur repellat excepturi</td>
+            </tr>
+            <tr>
+                <td class="cell1">03</td>
+                <td class="cell2">Velit</td>
+                <td class="cell3">23</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Iusto totam mollitia beatae alias</td>
+            </tr>
+            <tr>
+                <td class="cell1">04</td>
+                <td class="cell2">Officiis</td>
+                <td class="cell3">24</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Quod, minima deleniti! Optio, deserunt</td>
+            </tr>
+            <tr>
+                <td class="cell1">05</td>
+                <td class="cell2">Ut</td>
+                <td class="cell3">25</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Quis saepe nemo atque corrupti</td>
+            </tr>
+            <tr>
+                <td class="cell1">06</td>
+                <td class="cell2">Labore</td>
+                <td class="cell3">26</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Magnam a harum eum ipsa</td>
+            </tr>
+            <tr>
+                <td class="cell1">07</td>
+                <td class="cell2">Voluptatibus</td>
+                <td class="cell3">27</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Id aliquid harum eius autem</td>
+            </tr>
+            <tr>
+                <td class="cell1">08</td>
+                <td class="cell2">Repellendus</td>
+                <td class="cell3">28</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Odit repellat voluptatem in? Ex</td>
+            </tr>
+            <tr>
+                <td class="cell1">09</td>
+                <td class="cell2">Ea</td>
+                <td class="cell3">29</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Perferendis commodi ipsa accusantium optio</td>
+            </tr>
+            <tr>
+                <td class="cell1">10</td>
+                <td class="cell2">Esse</td>
+                <td class="cell3">20</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Quae neque beatae modi tenetur</td>
+            </tr>
+            <tr>
+                <td class="cell1">11</td>
+                <td class="cell2">Eaque</td>
+                <td class="cell3">21</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Qui velit nam voluptatem perferendis</td>
+            </tr>
+            <tr>
+                <td class="cell1">12</td>
+                <td class="cell2">Voluptatum</td>
+                <td class="cell3">22</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Dolorum perspiciatis voluptate rem aliquid</td>
+            </tr>
+            <tr>
+                <td class="cell1">13</td>
+                <td class="cell2">Non</td>
+                <td class="cell3">23</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Sint laboriosam eligendi id repellendus</td>
+            </tr>
+            <tr>
+                <td class="cell1">14</td>
+                <td class="cell2">Soluta</td>
+                <td class="cell3">24</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Dolorum quos numquam inventore assumenda</td>
+            </tr>
+            <tr>
+                <td class="cell1">15</td>
+                <td class="cell2">Animi</td>
+                <td class="cell3">25</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Perferendis doloremque rerum eos libero</td>
+            </tr>
+            <tr>
+                <td class="cell1">16</td>
+                <td class="cell2">Ad</td>
+                <td class="cell3">26</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Delectus quibusdam provident omnis laborum</td>
+            </tr>
+            <tr>
+                <td class="cell1">17</td>
+                <td class="cell2">Dolor</td>
+                <td class="cell3">27</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Doloremque libero dignissimos commodi numquam</td>
+            </tr>
+            <tr>
+                <td class="cell1">18</td>
+                <td class="cell2">Voluptas</td>
+                <td class="cell3">28</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Molestias tempora sit maxime excepturi</td>
+            </tr>
+            <tr>
+                <td class="cell1">19</td>
+                <td class="cell2">Quia</td>
+                <td class="cell3">29</td>
+                <td class="cell4">여자</td>
+                <td class="cell5">Deserunt, placeat. Eaque, accusamus nihil</td>
+            </tr>
+            <tr>
+                <td class="cell1">20</td>
+                <td class="cell2">Quibusdam</td>
+                <td class="cell3">30</td>
+                <td class="cell4">남자</td>
+                <td class="cell5">Esse exercitationem maiores hic consequuntur</td>
+            </tr>
+        </table>
+    </body>
+</html>
