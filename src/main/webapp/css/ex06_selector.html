@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex06_selector</title>
+        <style>
+            #tbl1 td {
+                color: blue;
+            }
+            .tbl2 > tbody > tr > td {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>테이블</h1>
+
+        <table id="tbl1" width="500" border="1">
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table class="tbl2" border="1">
+            <thead>
+                <tr>
+                    <th>제목</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>내용</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>바닥글</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
