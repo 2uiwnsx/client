@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex21_visibility</title>
+        <style>
+            #box {
+                border: 5px solid black;
+                padding: 30px;
+            }
+            #cat1, #cat2, #cat3 {
+                visibility: hidden;
+            }
+            #box:hover > img {
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <img src="./../asset/images/catty01.png" id="cat1">
+            <img src="./../asset/images/catty02.png" id="cat2">
+            <img src="./../asset/images/catty03.png" id="cat3">
+        </div>
+    </body>
+</html>
