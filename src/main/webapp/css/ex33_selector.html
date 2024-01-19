@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex33_selector</title>
+        <style>
+            p > span {
+                color: blue;
+            }
+            p > span.txt::before {
+                content: "[";
+                color: red;
+            }
+            p > span.txt::after {
+                content: "]";
+                color: red;
+            }
+            p > span.tel::before {
+                content: "☏";
+                margin-right: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor sit amet <span class="txt">consectetur</span> adipisicing elit. Vero quae exercitationem quod at <span class="txt">possimus</span> distinctio, repudiandae dolores corporis, placeat aliquam <span class="tel">010-1234-5678</span> deserunt tenetur minus debitis rem architecto, consectetur <span class="txt">sint</span> nobis totam
+        </p>
+    </body>
+</html>
