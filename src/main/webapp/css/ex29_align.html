@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex29_align</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            .div {
+                border: 1px solid black;
+            }
+            #span, #div1, #div2 {
+                background-color: gold;
+            }
+            #div1 {
+                width: 150px;
+            }
+            #div2 {
+                width: 150px;
+                text-align: center;
+                
+                /* margin-left: calc(50% - 75px); */
+                /* margin-right: auto;
+                margin-left: auto; */
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>수평 정렬</h1>
+
+        <h2>인라인 태그</h2>
+
+        <div class="div" style="text-align: center;">
+            <span id="span">인라인 태그</span>
+        </div>
+
+        <h2>블록 태그</h2>
+
+        <div class="div" style="text-align: center;">
+            <div id="div1">블록 태그</div>
+        </div>
+        
+        <br>
+
+        <div class="div">
+            <div id="div2">블록 태그</div>
+        </div>
+    </body>
+</html>
