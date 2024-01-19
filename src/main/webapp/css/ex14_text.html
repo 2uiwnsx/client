@@ -1,0 +1,93 @@
+<!--
+    ▶ 길이 단위
+
+        ▷ pt
+        ▷ px
+        ▷ %
+        ▷ em
+        ▷ rem
+
+    ▶ 기본 글꼴
+
+        ▷ serif : 삐침이 있는 글꼴
+        ▷ sans-serif : 삐침이 없는 글꼴
+        ▷ monospace : 고정폭 글꼴
+        ▷ cursive : 필기체와 유사한 글꼴
+        ▷ fantasy : 화려한 글꼴
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex14_text</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gamja+Flower&display=swap');
+
+            @font-face {
+                font-family: 'GangwonEduSaeeum_OTFMediumA';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            .txt {
+                /* font-style: normal; */
+                font-style: italic;
+                
+                /* font-weight: normal; */
+                font-weight: bold;
+                
+                /* font-size: 12pt; */
+                /* font-size: 16px; */
+                /* font-size: 100%; */
+                /* font-size: 1em; */
+                font-size: 1rem;
+                
+                /* line-height: 1.4rem; */
+                /* line-height: 1.6rem; */
+                line-height: 1.8rem;
+                
+                /* font-family: '맑은 고딕', '궁서체', '바탕체', monospace; */
+                font-family: 'GangwonEduSaeeum_OTFMediumA', 'Black Han Sans', sans-serif;
+                
+                color: #444;
+                letter-spacing: 0rem;
+                word-spacing: 0rem;
+                
+                /* text-decoration: none; */
+                /* text-decoration: line-through; */
+                text-decoration: underline;
+                
+                text-align: left;
+                text-indent: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>글꼴 속성</h1>
+
+        <p>
+            국가안전보장회의는 대통령이 주재한다. 모든 국민은 종교의 자유를 가진다. 학교교육 및 평생교육을 포함한 교육제도와 그 운영, 교육재정 및 교원의 지위에 관한 기본적인 사항은 법률로 정한다. 국가는 지역간의 균형있는 발전을 위하여 지역경제를 육성할 의무를 진다. 헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다. 대통령은 법률이 정하는 바에 의하여 사면·감형 또는 복권을 명할 수 있다. 훈장등의 영전은 이를 받은 자에게만 효력이 있고, 어떠한 특권도 이에 따르지 아니한다.
+        </p>
+        <p class="txt">
+            국가는 농업 및 어업을 보호·육성하기 위하여 농·어촌종합개발과 그 지원등 필요한 계획을 수립·시행하여야 한다. 형사피고인은 유죄의 판결이 확정될 때까지는 무죄로 추정된다. <span>헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수 없다. 대통령은 취임에 즈음하여 다음의 선서를 한다. 위원은 정당에 가입하거나 정치에 관여할 수 없다.</span> 이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.
+        </p>
+        <p>
+            대법원은 법률에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다. 공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 국회는 국가의 예산안을 심의·확정한다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 모든 국민은 소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다. 국회는 선전포고, 국군의 외국에의 파견 또는 외국군대의 대한민국 영역안에서의 주류에 대한 동의권을 가진다. 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. 정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다.
+        </p>
+
+        <hr>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis mollitia recusandae, magni quo incidunt minima. Quibusdam vel eligendi expedita voluptatem minima molestiae minus consequuntur recusandae delectus dolore beatae sed quo, officiis tempora sint perspiciatis impedit debitis at ad porro cum consequatur assumenda. Quibusdam vitae, non tempora maiores facilis asperiores? Asperiores explicabo consequuntur at praesentium eaque, maiores culpa illo facere odit saepe fugit voluptate suscipit obcaecati ipsam incidunt minima, optio ad placeat velit voluptates cumque pariatur est earum consectetur? Quia necessitatibus eligendi ex, molestiae pariatur vitae odit nulla aspernatur animi optio laborum aut est perferendis, autem beatae, eius molestias totam recusandae.
+        </p>
+        <p class="txt">
+            Vel suscipit optio dolor, rerum porro autem perspiciatis molestiae ipsa, qui fuga deserunt perferendis consequuntur excepturi corporis eius inventore alias odit consequatur et neque vero eaque veritatis. Voluptatibus nemo, doloribus amet incidunt sequi veritatis in itaque architecto quis sapiente autem provident deserunt id est. Veritatis quis molestiae itaque deleniti maxime, eligendi minus eveniet et fuga tempora, architecto possimus, quasi ipsa. Voluptatum iusto optio deserunt quae fugit sit doloremque error qui animi earum natus consequuntur ducimus voluptas laborum, quasi aliquid itaque inventore dolor repellat eligendi ratione fugiat? Quaerat earum quod, impedit deleniti possimus eligendi molestiae! Consectetur laboriosam deleniti nemo expedita asperiores.
+        </p>
+        <p>
+            Excepturi libero, assumenda rerum pariatur impedit voluptate laudantium in adipisci temporibus, veniam aut a at nam nesciunt debitis laborum quae? Libero sint ad dignissimos consectetur nihil iure magnam ducimus alias atque dolorem rerum incidunt corporis ipsa quam, adipisci voluptate hic voluptas. Ducimus perspiciatis nulla optio voluptatum sed minima adipisci doloribus tempora rerum. Voluptatem maiores sit fugit, cum perferendis illo corrupti repudiandae maxime iste vitae autem voluptas. Illum ipsa provident, voluptas doloremque autem neque nesciunt ducimus porro impedit fugiat quam laboriosam iusto rerum, culpa velit quaerat officiis, cupiditate pariatur deserunt. Consequatur accusamus eligendi nihil repellendus, dolorem sed asperiores adipisci nulla voluptatem.
+        </p>
+    </body>
+</html>
