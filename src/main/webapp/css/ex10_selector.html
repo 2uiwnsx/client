@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex10_selector</title>
+        <style>
+            /* #box {
+                color: blue;
+            }
+            .box {
+                color: red;
+            }
+            div {
+                color: limegreen;
+            } */
+
+            /* body > div {
+                color: blue;
+            }
+            div > div > div > div > div > div > div > div > div > div {
+                color: red;
+            }
+            div {
+                color: limegreen;
+            } */
+
+            div {
+                color: blue;
+            }
+            div {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box" class="box">div 태그입니다.</div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div class="box">div 태그입니다.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
