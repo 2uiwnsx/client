@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex22_display</title>
+        <style>
+            .link {
+                display: block;
+                width: 100px;
+                height: 50px;
+                border: 1px solid black;
+            }
+            #menu li {
+                display: inline-block;
+                width: 17%;
+                text-align: center;
+                background-color: #CCC;
+                padding: 10px;
+            }
+            #menu li:hover {
+                color: white;
+                background-color: #333;
+            }
+            .box {
+                display: inline;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>인라인 태그</h1>
+
+        <a href="http://naver.com" class="link">링크1</a>
+        <a href="http://naver.com" class="link">링크2</a>
+        <a href="http://naver.com" class="link">링크3</a>
+
+        <h1>블록 태그</h1>
+
+        <ul id="menu">
+            <li>메뉴</li>
+            <li>메뉴</li>
+            <li>메뉴</li>
+            <li>메뉴</li>
+            <li>메뉴</li>
+        </ul>
+
+        <div class="box">상자1</div>
+        <div class="box">상자2</div>
+        <div class="box">상자3</div>
+    </body>
+</html>
