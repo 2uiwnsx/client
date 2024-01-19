@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex30_selector</title>
+        <style>
+            body {
+                margin-bottom: 30px;
+            }
+
+            /* li:first-child {
+                color: blue;
+            }
+            li:nth-child(5) {
+                color: red;
+            }
+            li:nth-last-child(3) {
+                color: limegreen;
+            }
+            li:last-child {
+                color: fuchsia;
+            } */
+
+            li:nth-child(2n + 1) {
+                color: blue;
+            }
+            li:nth-child(even) {
+                color: red;
+            }
+            #tbl {
+                border: 1px solid gray;
+            }
+            #tbl tr:first-child {
+                background-color: #EEE;
+            }
+            #tbl th, #tbl td {
+                border: 1px solid gray;
+                padding: 5px 10px;
+            }
+            #tbl tr:nth-child(even) td:nth-child(odd) {
+                background-color: lightcyan;
+            }
+            #tbl tr:nth-child(odd) td:nth-child(even) {
+                background-color: mistyrose;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>목록</h1>
+
+        <ul id="list">
+            <li>사과</li>
+            <li>귤</li>
+            <li>바나나</li>
+            <li>포도</li>
+            <li>복숭아</li>
+            <li>파인애플</li>
+            <li>참외</li>
+            <li>망고</li>
+            <li>수박</li>
+            <li>딸기</li>
+        </ul>
+
+        <h1>테이블</h1>
+
+        <table id="tbl">
+            <tr>
+                <th>컬럼명</th>
+                <th>컬럼명</th>
+                <th>컬럼명</th>
+                <th>컬럼명</th>
+                <th>컬럼명</th>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+            <tr>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+                <td>데이터</td>
+            </tr>
+        </table>
+    </body>
+</html>
