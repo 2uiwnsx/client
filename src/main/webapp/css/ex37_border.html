@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex37_border</title>
+        <script src="https://kit.fontawesome.com/f1d09bde32.js" crossorigin="anonymous"></script>
+        <style>
+            body {
+                margin-bottom: 50px;
+            }
+            #box {
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+
+                /* border-radius: 50%; */
+                /* border-radius: 100px; */
+                /* border-radius: 100px 100px; */
+                /* border-radius: 100px 100px 100px; */
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+                border-bottom-left-radius: 100px;
+                
+                margin: 50px;
+            }
+            #cat img {
+                /* border-radius: 50%; */
+                border-radius: 94px;
+            }
+            #txt {
+                border: 1px solid #777;
+                border-radius: 15px;
+                outline: none;
+                padding: 5px 10px;
+            }
+            #search1 input {
+                color: #333;
+                border: 1px solid #777;
+                outline: none;
+                padding: 5px;
+                float: left;
+                margin-bottom: 10px;
+            }
+            #search1 input[type="text"] {
+                border-right: 0;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            #search1 input[type="button"] {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            #search1::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            #search2 input, #search2 button {
+                color: #333;
+                border: 1px solid #777;
+                outline: none;
+                padding: 5px;
+                float: left;
+            }
+            #search2 input[type="text"] {
+                border-right: 0;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            #search2 button {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            #search2 button:hover {
+                background-color: #CCC;
+            }
+            .fa-solid.fa-magnifying-glass {
+                color: cornflowerblue;
+            }
+            #search2::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, expedita officia? Dignissimos, architecto quisquam sint in praesentium iusto quia fugiat laudantium earum? Dicta, nam iure. Illo eligendi reprehenderit pariatur sint?
+        </div>
+
+        <hr>
+
+        <div id="cat">
+            <img src="./../asset/images/cat01.jpg">
+            <img src="./../asset/images/cat02.jpg">
+            <img src="./../asset/images/cat03.jpg">
+            <img src="./../asset/images/cat04.jpg">
+            <img src="./../asset/images/cat05.jpg">
+        </div>
+
+        <hr>
+
+        <input type="text" id="txt">
+
+        <hr>
+
+        <h1>검색</h1>
+
+        <div id="search1">
+            <input type="text" placeholder="검색어를 입력하세요.">
+            <input type="button" value="Search">
+        </div>
+
+        <div id="search2">
+            <input type="text" placeholder="검색어를 입력하세요.">
+
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </body>
+</html>
