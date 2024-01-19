@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex32_selector</title>
+        <style>
+            input[type="text"] {
+                display: block;
+                color: #333;
+                border: 1px solid #555;
+                outline: none;
+                padding: 3px;
+                margin-bottom: 3px;
+            }
+            
+            /* input[type="text"]:required {
+                background-color: palegreen;
+            }
+            input[type="text"]:optional {
+                background-color: #EEE;
+            } */
+
+            /* input[type="text"]:read-only {
+                background-color: palegreen;
+            }
+            input[type="text"]:read-write {
+                background-color: #EEE;
+            } */
+
+            input[type="text"]:disabled {
+                background-color: palegreen;
+            }
+            input[type="text"]:enabled {
+                background-color: #EEE;
+            }
+            .cb {
+                width: 20px;
+                height: 20px;
+            }
+            .cb:checked {
+                opacity: 0.5;
+            }
+            #cb1:checked + #cat {
+                position: relative;
+                top: 100px;
+                left: 200px;
+            }
+            #cb2 + label + div {
+                display: none;
+            }
+            #cb2:checked + label + div {
+                display: block;
+            }
+            #item {
+                width: 200px;
+                border: 1px solid black;
+            }
+            #item #cb3 {
+                display: none;
+            }
+            #item label {
+                display: block;
+                font-size: 1.5rem;
+                color: white;
+                background-color: cornflowerblue;
+                padding: 10px;
+                cursor: pointer;
+            }
+            #item #cb3:checked ~ label {
+                background-color: tomato;
+            }
+            #item div {
+                display: none;
+                border-top: 1px solid black;
+                padding: 15px;
+            }
+            #item #cb3:checked ~ div {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="list">
+            <input type="text" value="1" required>
+            <input type="text" value="2" readonly>
+            <input type="text" value="3" readonly>
+            <input type="text" value="4">
+            <input type="text" value="5" required>
+            <input type="text" value="6" disabled>
+            <input type="text" value="7">
+            <input type="text" value="8" disabled>
+            <input type="text" value="9">
+            <input type="text" value="10" required>
+        </div>
+
+        <hr>
+
+        <div>
+            <input type="checkbox" class="cb">
+            <input type="checkbox" class="cb">
+            <input type="checkbox" class="cb">
+        </div>
+
+        <hr>
+
+        <div>
+            <input type="checkbox" id="cb1">
+
+            <img src="./../asset/images/catty01.png" id="cat">
+        </div>
+
+        <hr>
+
+        <details>
+            <summary>제목</summary>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, optio similique fugiat hic eius unde nesciunt odio pariatur omnis delectus libero fugit cum ad iure iusto aperiam corporis sequi, cumque molestiae nostrum maiores provident, voluptate tempora reiciendis! Dolores, nemo pariatur! Cum qui voluptate aut explicabo et reiciendis iste fuga facere.
+            </p>
+        </details>
+
+        <hr>
+
+        <input type="checkbox" id="cb2"><label for="cb2">제목</label>
+
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, amet eligendi recusandae hic facere nihil? Dolorum ab aliquid modi? Animi harum error quisquam, cupiditate in deserunt odio nulla sunt, sed eum officia excepturi nesciunt voluptates est. Provident eum modi totam similique doloremque error natus, iste repellat ipsam beatae, nesciunt nihil.
+        </div>
+
+        <hr>
+
+        <div id="item">
+            <input type="checkbox" id="cb3"><label for="cb3">제목</label>
+
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum beatae nisi quis quod, eos odit debitis rerum voluptatem consequatur ipsum adipisci doloremque tenetur voluptates saepe aliquid vel numquam et, eveniet, facilis corporis vero? Labore quibusdam hic voluptatum atque necessitatibus, quos temporibus dolore quisquam, provident laboriosam et facere distinctio. Quasi, incidunt.
+            </div>
+        </div>
+    </body>
+</html>
