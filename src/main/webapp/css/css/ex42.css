@@ -1,0 +1,46 @@
+#main {
+    width: 596px;
+    margin: 20px auto;
+}
+#main #header {
+    font-weight: bold;
+    font-size: 15px;
+    color: #444;
+    letter-spacing: -0.5px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 12px;
+}
+#main #content .item {
+    border-bottom: 1px solid #DEDEDE;
+    padding: 20px 0;
+}
+#main #content .item img {
+    width: 106px;
+    height: 72px;
+    float: left;
+    margin-right: 20px;
+}
+#main #content .item .txt {
+    width: 470px;
+    float: right;
+}
+#main #content .item .txt .title {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+#main #content .item .txt .desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+#main #content .item .txt .pub {
+    font-size: 13px;
+    color: #888;
+}
+#main #content .item::after {
+    content: "";
+    display: block;
+    clear: both;
+}
