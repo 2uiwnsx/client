@@ -1,0 +1,52 @@
+#list {
+    width: 1000px;
+    border: 5px solid thistle;
+}
+#list .box {
+    width: 100px;
+    height: 50px;
+    margin: 15px 0;
+    transition-property: margin-left;
+    transition-duration: 3s;
+}
+#list:hover .box {
+    margin-left: 900px;
+}
+#box1 {
+    background-color: tomato;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+#box2 {
+    background-color: orange;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
+}
+#box3 {
+    background-color: gold;
+    transition-timing-function: ease-in;
+    transition-delay: 1.5s;
+}
+#box4 {
+    background-color: yellowgreen;
+    transition-timing-function: ease-out;
+    transition-delay: 2s;
+}
+#box5 {
+    background-color: cornflowerblue;
+    transition-timing-function: ease-in-out;
+    transition-delay: 2.5s;
+}
+#icon {
+    width: 126px;
+    height: 126px;
+    border: 5px solid darkseagreen;
+    overflow: hidden;
+}
+#icon img {
+    transform: translate(0, 126px);
+    transition: all 0.5s;
+}
+#icon:hover img {
+    transform: translate(0, 0);
+}
