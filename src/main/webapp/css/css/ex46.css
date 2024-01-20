@@ -1,0 +1,22 @@
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    border: 10px solid black;
+    margin: 50px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+body:hover #box {
+    width: 400px;
+    height: 400px;
+    font-size: 3rem;
+    color: aquamarine;
+    background-color: cornflowerblue;
+    border-width: 50px;
+    border-radius: 50%;
+    box-shadow: 20px 20px 10px #555;
+    opacity: 0.5;
+    margin-left: 150px;
+    transform: rotate(360deg);
+}
