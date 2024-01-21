@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex12_mouseevent</title>
+        <style>
+            textarea {
+                display: block;
+                width: 500px;
+                height: 300px;
+                outline: none;
+                resize: none;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>마우스 이벤트</h1>
+
+        <form name="form">
+            <textarea name="txt"></textarea>
+
+            <input type="button" name="btn" value="버튼">
+        </form>
+
+        <script>
+            var txt = window.document.form.txt;
+
+            function message(msg) {
+                txt.value = new Date().toLocaleTimeString() + ' ➜ ' + msg + '\r\n' + txt.value;
+            }
+
+            function m1() {
+                message('mouseover');
+
+                window.document.body.bgColor = 'cornflowerblue';
+            }
+
+            function m2() {
+                message('mouseout');
+
+                window.document.body.bgColor = 'white';
+            }
+
+            // txt.onmouseover = m1;
+            // txt.onmouseout = m2;
+
+            function m3() {
+                // message(event.buttons);
+
+                // message(event.screenX + ', ' + event.screenY);
+
+                // message(event.clientX + ', ' + event.clientY);
+
+                message(event.offsetX + ', ' + event.offsetY);
+            }
+
+            function m4() {
+                message('mouseup');
+            }
+
+            // txt.onmousedown = m3;
+            // txt.onmouseup = m4;
+
+            function m5() {
+                message(event.offsetX + ', ' + event.offsetY);
+            }
+
+            txt.onmousemove = m5;
+        </script>
+    </body>
+</html>
