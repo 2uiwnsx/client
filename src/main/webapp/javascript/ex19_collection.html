@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex19_collection</title>
+    </head>
+    <body>
+        <h1>이미지</h1>
+
+        <img src="./../asset/images/catty01.png" name="img">
+        <img src="./../asset/images/catty02.png">
+        <img src="./../asset/images/catty03.png">
+        <img src="./../asset/images/catty04.png">
+        <img src="./../asset/images/catty05.png">
+
+        <h1>링크</h1>
+
+        <a href="https://naver.com" name="link">네이버</a>
+        <a href="https://google.com">구글</a>
+        <a href="https://daum.net">다음</a>
+
+        <h1>앵커</h1>
+
+        <a name="a1">앵커1</a>
+        <a name="a2">앵커2</a>
+
+        <h1>폼</h1>
+
+        <form>
+            <input type="text" name="txt">
+            <input type="text">
+            <input type="text">
+        </form>
+        
+        <br>
+
+        <form>
+            <input type="checkbox">
+            <input type="radio">
+        </form>
+
+        <script>
+            console.log(document.all.length);
+
+            for (var i = 0; i < document.all.length; i++) {
+                console.log(document.all[i]);
+            }
+
+            console.clear();
+
+            console.log(document.images.length);
+
+            for (var i = 0; i < document.images.length; i++) {
+                console.log(document.images[i].src);
+            }
+
+            console.log(document.links.length);
+
+            for (var i = 0; i < document.links.length; i++) {
+                console.log(document.links[i].href);
+            }
+
+            console.log(document.anchors.length);
+
+            for (var i = 0; i < document.anchors.length; i++) {
+                console.log(document.anchors[i].name);
+            }
+
+            console.log(document.forms.length);
+
+            for (var i = 0; i < document.forms.length; i++) {
+                console.log(document.forms[i].elements.length);
+            }
+            
+            // document.images[0].width = 50;
+            // document.links[0].target = '_blank';
+            // document.forms[0].txt.value = '테스트';
+
+            // document.images.img.width = 50;
+            // document.links.link.target = '_blank';
+            // document.forms[0].txt.value = '테스트';
+            
+            document.images['img'].width = 50;
+            document.links['link'].target = '_blank';
+            document.forms[0]['txt'].value = '테스트';
+        </script>
+    </body>
+</html>
