@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex15_window</title>
+    </head>
+    <body>
+        <h1>부모 페이지</h1>
+
+        <form name="form1">
+            <fieldset>
+                <legend>창 제어</legend>
+
+                <input type="button" name="pBtn1" value="자식 창 열기">
+                <input type="button" name="pBtn2" value="자식 창 닫기">
+            </fieldset>
+            
+            <br>
+
+            <fieldset>
+                <legend>자식 페이지 수정</legend>
+
+                <input type="text" name="pTxt">
+                <input type="button" name="pBtn3" value="수정">
+            </fieldset>
+        </form>
+
+        <hr>
+
+        <h1>아이디 중복 검사</h1>
+
+        <form name="form2">
+            <input type="text" id="id" size="10">
+            <input type="button" id="checkBtn" value="검사">
+        </form>
+        
+        <script>
+            var pBtn1 = window.document.form1.pBtn1;
+            var pBtn2 = window.document.form1.pBtn2;
+            var pBtn3 = window.document.form1.pBtn3;
+
+            var child;
+
+            function m1() {
+                child = window.open('ex15_child.html', 'child', 'width=500,height=300,top=150,left=300');
+            }
+
+            pBtn1.onclick = m1;
+
+            function m2() {
+                child.close();
+            }
+
+            pBtn2.onclick = m2;
+
+            function m3() {
+                child.document.form.cTxt.value = '🐊';
+                child.document.body.bgColor = 'gold';
+            }
+
+            pBtn3.onclick = m3;
+
+            var checkBtn = window.document.form2.checkBtn;
+
+            function m4() {
+                window.open('ex15_idcheck.html', 'idcheck', 'width=500,height=400');
+            }
+
+            checkBtn.onclick = m4;
+        </script>
+    </body>
+</html>

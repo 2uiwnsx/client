@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex15_idcheck</title>
+    </head>
+    <body>
+        <h1>아이디 중복 검사</h1>
+
+        <form name="form">
+            <input type="text" name="id" size="10">
+            <input type="button" value="검사">
+
+            <hr>
+
+            사용 가능한 아이디입니다.
+
+            <hr>
+
+            <input type="button" id="useBtn" value="아이디 사용">
+            <input type="button" id="closeBtn" value="창 닫기">
+        </form>
+
+        <script>
+            var id = window.document.form.id;
+            var useBtn = window.document.form.useBtn;
+            var closeBtn = window.document.form.closeBtn;
+
+            function m1() {
+                opener.document.form2.id.value = id.value;
+
+                window.close();
+            }
+
+            useBtn.onclick = m1;
+        </script>
+    </body>
+</html>

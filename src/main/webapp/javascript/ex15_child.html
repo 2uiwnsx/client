@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex15_child</title>
+    </head>
+    <body>
+        <h1>자식 페이지</h1>
+
+        <form name="form">
+            <input type="text" name="cTxt">
+            <input type="button" name="cBtn" value="부모 페이지 수정">
+        </form>
+
+        <script>
+            var cBtn = window.document.form.cBtn;
+            var cTxt = window.document.form.cTxt;
+
+            function m1() {
+                opener.document.form1.pTxt.value = '🦕';
+                opener.document.body.bgColor = 'cornflowerblue';
+            }
+
+            cBtn.onclick = m1;
+        </script>
+    </body>
+</html>
