@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex14_attribute</title>
+    </head>
+    <body>
+        <h1>HTML 요소의 속성 제어</h1>
+
+        <form name="form">
+            <input type="text" name="txt">
+            <input type="button" name="btn" value="끄기">
+        </form>
+
+        <script>
+            var txt = window.document.form.txt;
+            var btn = window.document.form.btn;
+
+            function m1() {
+                if (window.document.body.bgColor != 'black') {
+                    document.body.text = 'white';
+                    window.document.body.bgColor = 'black';
+                    btn.value = 'ON';
+                } else {
+                    document.body.text = 'black';
+                    window.document.body.bgColor = 'white';
+                    btn.value = 'OFF';
+                }
+            }
+
+            btn.onclick = m1;
+        </script>
+    </body>
+</html>
