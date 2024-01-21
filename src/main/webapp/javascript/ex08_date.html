@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex08_date</title>
+    </head>
+    <body>
+        <script>
+            var now = new Date();
+            
+            console.log(now.getYear());
+            console.log(now.getFullYear());
+            console.log(now.getMonth() + 1);
+            console.log(now.getDate());
+            console.log(now.getDay());
+            console.log(now.getHours());
+            console.log(now.getMinutes());
+            console.log(now.getSeconds());
+            console.log(now.getMilliseconds());
+
+            console.log(now.getTime());
+
+            console.log(now.toString());
+            console.log(now.toLocaleString());
+            console.log(now.toLocaleDateString());
+            console.log(now.toLocaleTimeString());
+
+            console.clear();
+
+            var christmas = new Date();
+
+            christmas.setFullYear(2023);
+            christmas.setMonth(11);
+            christmas.setDate(25);
+            christmas.setHours(0);
+            christmas.setMinutes(0);
+            christmas.setSeconds(0);
+
+            console.log(christmas.toLocaleString());
+
+            console.log(christmas - now);
+            console.log((christmas - now) / 1000 / 60 / 60 / 24);
+
+            var birthday = new Date(2000, 9, 6, 0, 15, 0);
+
+            console.log(birthday.toLocaleString());
+
+            console.log(now - birthday);
+            console.log((now - birthday) / 1000 / 60 / 60 / 24);
+
+            var anniversary = new Date();
+
+            anniversary.setTime(now.getTime() + (100 * (24 * 60 * 60 * 1000)));
+
+            console.log(anniversary.toLocaleString());
+        </script>
+    </body>
+</html>
