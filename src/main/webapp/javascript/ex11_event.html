@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex11_event</title>
+        <style>
+            input {
+                display: block;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>이벤트(Event)</h1>
+
+        <form name="form">
+            <input type="text" name="txt">
+            <input type="button" value="버튼1" name="btn1" onclick="window.document.form.txt.value = '홍길동';">
+            <input type="button" value="버튼2" name="btn2" onclick="m1();">
+            <input type="button" value="버튼3" name="btn3">
+        </form>
+
+        <script>
+            function m1() {
+                window.document.form.txt.value = '아무개';
+            }
+
+            function m2() {
+                window.document.form.txt.value = '하하하';
+            }
+
+            if (((new Date()).getSeconds() % 2) == 0) {
+                window.document.form.btn3.onclick = m2;
+            }
+        </script>
+    </body>
+</html>
