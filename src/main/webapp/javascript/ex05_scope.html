@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex05_scope</title>
+    </head>
+    <body>
+        <script>
+            // 전역 변수
+            var num1 = 100;
+
+            console.log('num1:', num1);
+
+            function m1() {
+                // 지역 변수
+                var num2 = 200;
+
+                console.log('num2:', num2);
+            }
+
+            m1();
+
+            // Uncaught ReferenceError: num2 is not defined.
+            // console.log('num2:', num2);
+
+            if (num1 > 0) {
+                // 전역 변수
+                var num3 = 300;
+
+                console.log('num3:', num3);
+            }
+
+            console.log('num3:', num3);
+
+            // 전역 변수
+            num4 = 400;
+
+            console.log('num4:', num4);
+
+            function m2() {
+                // 지역 변수
+                var num5 = 500;
+
+                console.log('num5:', num5);
+
+                // 전역 변수
+                num6 = 600;
+                
+                console.log('num6:', num6);
+            }
+
+            m2();
+
+            // Uncaught ReferenceError: num5 is not defined.
+            // console.log('num5:', num5);
+
+            console.log('num6:', num6);
+        </script>
+    </body>
+</html>
