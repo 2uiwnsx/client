@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex30_content</title>
+        <style>
+            img {
+                display: block;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Content</h1>
+
+        <input type="button" id="btn1" value="버튼1">
+        <input type="button" id="btn2" value="버튼2">
+
+        <hr>
+
+        <div id="div"><img src="./../asset/images/catty01.png"></div>
+
+        <script>
+            var n = 1;
+
+            function m1() {
+                var div = document.getElementById('div');
+
+                n++;
+
+                if (n > 9) {
+                    n = 1;
+                }
+
+                // div.innerText += '<img src="./../asset/images/catty0' + n + '.png">';
+
+                // div.innerHTML += '<img src="./../asset/images/catty0' + n + '.png">';
+                
+                div.textContent += '<img src="./../asset/images/catty0' + n + '.png">';
+            }
+
+            document.getElementById('btn1').onclick = m1;
+
+            function m2() {
+                document.getElementById('div').innerHTML = '';
+            }
+
+            document.getElementById('btn2').onclick = m2;
+        </script>
+    </body>
+</html>
