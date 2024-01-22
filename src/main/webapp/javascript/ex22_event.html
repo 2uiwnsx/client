@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex22_event</title>
+        <style>
+            .item {
+                width: 400px;
+                text-align: center;
+                background-color: #EEE;
+                border: 1px solid #CCC;
+                padding: 10px;
+                margin: 15px;
+            }
+            .item > input[type="button"] {
+                width: 100px;
+                height: 60px;
+                background-color: white;
+                border: 1px solid #CCC;
+                outline: none;
+                margin: 10px;
+            }
+            .item > input[type="button"]:hover {
+                box-shadow: 0 0 3px gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>이벤트 핸들러(Event Handler)</h1>
+
+        <form name="form">
+            <div class="item">
+                <input type="button" name="red" value="빨강" onclick="m1();">
+                <input type="button" name="yellow" value="노랑" onclick="m2();">
+                <input type="button" name="blue" value="파랑" onclick="m3();">
+            </div>
+            <div class="item">
+                <input type="button" name="red1" value="빨강">
+                <input type="button" name="yellow1" value="노랑">
+                <input type="button" name="blue1" value="파랑">
+            </div>
+            <div class="item">
+                <input type="button" name="red" value="빨강" onclick="m4('tomato');">
+                <input type="button" name="yellow" value="노랑" onclick="m4('gold');">
+                <input type="button" name="blue" value="파랑" onclick="m4('cornflowerblue');">
+            </div>
+            <div class="item">
+                <input type="button" name="red" value="빨강" onclick="m5(this);">
+                <input type="button" name="yellow" value="노랑" onclick="m5(this);">
+                <input type="button" name="blue" value="파랑" onclick="m5(this);">
+            </div>
+            <div class="item">
+                <input type="button" name="red" value="빨강" data-color="tomato" onclick="m6(this);">
+                <input type="button" name="yellow" value="노랑" data-color="gold" onclick="m6(this);">
+                <input type="button" name="blue" value="파랑" data-color="cornflowerblue" onclick="m6(this);">
+            </div>
+            <div class="item">
+                <input type="button" name="red" value="빨강" data-color="tomato" onclick="m7();">
+                <input type="button" name="yellow" value="노랑" data-color="gold" onclick="m7();">
+                <input type="button" name="blue" value="파랑" data-color="cornflowerblue" onclick="m7();">
+            </div>
+            <div class="item">
+                <input type="button" name="red2" value="빨강" data-color="tomato">
+                <input type="button" name="yellow2" value="노랑" data-color="gold">
+                <input type="button" name="blue2" value="파랑" data-color="cornflowerblue">
+            </div>
+            <div class="item">
+                <input type="button" name="btn" value="빨강" data-color="tomato">
+                <input type="button" name="btn" value="노랑" data-color="gold">
+                <input type="button" name="btn" value="파랑" data-color="cornflowerblue">
+                <input type="button" name="btn" value="주황" data-color="orange">
+                <input type="button" name="btn" value="초록" data-color="yellowgreen">
+            </div>
+        </form>
+
+        <hr>
+
+        <img src="./../asset/images/catty01.png" name="cat">
+        <img src="./../asset/images/catty02.png" name="cat">
+        <img src="./../asset/images/catty03.png" name="cat">
+        <img src="./../asset/images/catty04.png" name="cat">
+        <img src="./../asset/images/catty05.png" name="cat">
+
+        <hr>
+
+        <img src="./../asset/images/dog01.jpg">
+
+        <script>
+            function m1() {
+                document.body.bgColor = 'tomato';
+            }
+
+            function m2() {
+                document.body.bgColor = 'gold';
+            }
+
+            function m3() {
+                document.body.bgColor = 'cornflowerblue';
+            }
+            
+            document.form.red1.onclick = m1;
+            document.form.yellow1.onclick = m2;
+            document.form.blue1.onclick = m3;
+
+            function m4(color) {
+                document.body.bgColor = color;
+            }
+
+            function m5(btn) {
+                var color;
+
+                if (btn.name == 'red') {
+                    color = 'tomato';
+                } else if (btn.name == 'yellow') {
+                    color = 'gold';
+                } else if (btn.name == 'blue') {
+                    color = 'cornflowerblue';
+                }
+
+                document.body.bgColor = color;
+            }
+
+            function m6(btn) {
+                document.body.bgColor = btn.dataset['color'];
+            }
+
+            function m7() {
+                // document.body.bgColor = event.srcElement.dataset['color'];
+                
+                document.body.bgColor = event.target.dataset['color'];
+            }
+
+            document.form.red2.onclick = m7;
+            document.form.yellow2.onclick = m7;
+            document.form.blue2.onclick = m7;
+
+            for (var i = 0; i < document.form.btn.length; i++) {
+                document.form.btn[i].onclick = m7;
+            }
+
+            function m8() {
+                if (event.target.width == 128) {
+                    event.target.width = 200;
+                } else {
+                    event.target.width = 128;
+                }
+            }
+
+            for (var i = 0; i < document.images.length; i++) {
+                if (document.images[i].name == 'cat') {
+                    document.images[i].onclick = m8;
+                }
+            }
+        </script>
+    </body>
+</html>
