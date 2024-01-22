@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex25_check</title>
+    </head>
+    <body>
+        <h1>체크박스</h1>
+
+        <form name="form">
+            <input type="checkbox" name="cb">
+            <input type="button" name="btn" value="버튼">
+        </form>
+
+        <hr>
+
+        <h1>장바구니</h1>
+
+        <table width="500" border="1">
+            <tr>
+                <th><input type="checkbox" name="allCb"></th>
+                <th>상품명</th>
+                <th>수량</th>
+                <th>가격</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="itemCb"></td>
+                <td>노트북</td>
+                <td>1</td>
+                <td>2,000,000원</td>
+            </tr>
+        </table>
+
+        <script>
+            function m1() {
+                document.form.cb.checked = !document.form.cb.checked;
+            }
+
+            document.form.btn.onclick = m1;
+
+            function m2() {
+                for (var i = 0; i < document.all.itemCb.length; i++) {
+                    document.all.itemCb[i].checked = event.target.checked;
+                }
+            }
+
+            document.all.allCb.onchange = m2;
+        </script>
+    </body>
+</html>
