@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex23_message</title>
+    </head>
+    <body>
+        <h1>대화 상자(Dialog Box)</h1>
+
+        <form name="form">
+            <input type="button" name="btn1" value="버튼1">
+            <input type="button" name="btn2" value="버튼2">
+            <input type="button" name="btn3" value="버튼3">
+        </form>
+
+        <script>
+            function m1() {
+                alert('메시지');
+            }
+
+            document.form.btn1.onclick = m1;
+
+            function m2() {
+                var result = confirm('메시지');
+
+                if (result) {
+                    document.body.bgColor = 'gold';
+                } else {
+                    document.body.bgColor = 'white';
+                }
+            }
+
+            document.form.btn2.onclick = m2;
+
+            function m3() {
+                var name = prompt('이름을 입력하세요.', '홍길동');
+
+                alert(name);
+            }
+
+            document.form.btn3.onclick = m3;
+        </script>
+    </body>
+</html>
