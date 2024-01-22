@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex26_radio</title>
+    </head>
+    <body>
+        <h1>라디오 버튼</h1>
+
+        <label><input type="radio" name="rd" value="white" checked>하양</label>
+        <label><input type="radio" name="rd" value="black">검정</label>
+        <label><input type="radio" name="rd" value="tomato">빨강</label>
+        <label><input type="radio" name="rd" value="gold">노랑</label>
+        <label><input type="radio" name="rd" value="cornflowerdlue">파랑</label>
+
+        <script>
+            var rd = document.all.rd;
+
+            function m1() {
+                if (event.target.value == 'black') {
+                    document.body.text = 'white';
+                    document.body.bgColor = event.target.value;
+                } else {
+                    document.body.text = 'black';
+                    document.body.bgColor = event.target.value;
+                }
+            }
+
+            for (var i = 0; i < rd.length; i++) {
+                rd[i].onchange = m1;
+            }
+        </script>
+    </body>
+</html>
