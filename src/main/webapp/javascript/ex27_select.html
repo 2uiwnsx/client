@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex27_select</title>
+    </head>
+    <body>
+        <h1>셀렉트 박스</h1>
+
+        <select name="sel" multiple size="7">
+            <option value="f1">사과</option>
+            <option value="f2">딸기</option>
+            <option value="f3">바나나</option>
+            <option value="f4">키위</option>
+            <option value="f5">망고</option>
+        </select>
+
+        <hr>
+
+        <input type="button" name="btn1" value="버튼1">
+        <input type="button" name="btn2" value="버튼2">
+        <input type="button" name="btn3" value="버튼3">
+        <input type="button" name="btn4" value="버튼4">
+        <input type="button" name="btn5" value="버튼5">
+
+        <script>
+            var sel = document.all.sel;
+
+            function m1() {
+                sel.value = 'f3';
+            }
+
+            document.all.btn1.onclick = m1;
+
+            function m2() {
+                sel.selectedIndex = 1;
+            }
+
+            document.all.btn2.onclick = m2;
+
+            function m3() {
+                for (var i = 0; i < sel.options.length; i++) {
+                    if (sel.options[i].text == '귤') {
+                        return;
+                    }
+                }
+
+                var op = new Option();
+                
+                op.text = '귤';
+                op.value = 'f6';
+                
+                sel.options.add(op);
+            }
+
+            document.all.btn3.onclick = m3;
+
+            function m4() {
+                sel.options.remove(sel.selectedIndex);
+            }
+
+            document.all.btn4.onclick = m4;
+
+            function m5() {
+                sel.options[0].selected = true;
+                sel.options[2].selected = true;
+                sel.options[4].selected = true;
+            }
+
+            document.all.btn5.onclick = m5;
+        </script>
+    </body>
+</html>
