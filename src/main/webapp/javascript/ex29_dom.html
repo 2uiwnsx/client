@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex29_dom</title>
+        <style>
+            input {
+                display: block;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM</h1>
+
+        <form name="form">
+            <div>
+                <input type="text" name="txt1" id="txt1" class="txt">
+                <input type="text" name="txt2" id="txt2" class="txt">
+                <input type="text" name="txt3" id="txt3" class="txt">
+                <input type="button" name="btn" value="버튼">
+            </div>
+        </form>
+
+        <script>
+            // document.form.txt1.value = 'BOM';
+
+            // document.getElementById('txt1').value = 'DOM';
+
+            // console.log(document.form.txt1 === document.getElementById('txt1'));
+
+            // var txt = document.getElementsByClassName('txt');
+            // for (var i = 0; i < txt.length; i++) {
+            //     txt[i].value = i;
+            // }
+
+            // document.getElementsByName('txt1')[0].value = 'DOM';
+
+            // var list = document.getElementsByTagName('input');
+            // for (var i = 0; i < (list.length - 1); i++) {
+            //     list[i].value = i;
+            // }
+
+            document.querySelector('#txt1').value = 100;
+            document.querySelector('input:nth-child(2)').value = 200;
+
+            console.log(document.querySelectorAll('.txt').length);
+        </script>
+    </body>
+</html>
