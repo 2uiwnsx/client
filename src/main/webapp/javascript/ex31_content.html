@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex31_content</title>
+        <style>
+            fieldset {
+                width: 70px;
+                border: 1px solid #777;
+            }
+            fieldset > label {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input {
+                margin-left: 14px;
+            }
+            #tbl {
+                border: 1px solid gray;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            #tbl td {
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>테이블 생성</h1>
+
+        <fieldset>
+            <legend>행 X 열</legend>
+
+            <label>행: <select id="rowSel"></select></label>
+            <label>열: <select id="conlumnSel"></select></label>
+
+            <input type="button" id="btn" value="생성">
+        </fieldset>
+
+        <table id="tbl"></table>
+
+        <script>
+            var rowSel = document.getElementById('rowSel');
+            var conlumnSel = document.getElementById('conlumnSel');
+            var btn = document.getElementById('btn');
+            var tbl = document.getElementById('tbl');
+
+            for (var i = 1; i <= 10; i++) {
+                rowSel.options.add(new Option(i, i));
+                conlumnSel.options.add(new Option(i, i));
+            }
+
+            function m1() {
+                var temp = '';
+
+                for (var i = 0; i < rowSel.value; i++) {
+                    temp += '<tr>';
+                    
+                    for (var j = 0; j < conlumnSel.value; j++) {
+                        temp += '<td>';
+                        temp += i + ', ' + j;
+                        temp += '</td>';
+                    }
+
+                    temp += '</tr>';
+                }
+
+                tbl.innerHTML = temp;
+            }
+
+            btn.onclick = m1;
+        </script>
+    </body>
+</html>
