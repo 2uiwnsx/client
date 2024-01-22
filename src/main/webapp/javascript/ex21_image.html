@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex21_image</title>
+    </head>
+    <body>
+        <h1>이미지</h1>
+
+        <input type="button" name="btn" value="버튼">
+
+        <hr>
+
+        <img src="./../asset/images/cat01.jpg" name="cat1">
+
+        <hr>
+
+        <img src="./../asset/images/cat01.jpg" name="cat2">
+
+        <hr>
+
+        <img src="./../asset/images/switch_on.png" name="sw">
+
+        <hr>
+
+        <img src="./../asset/images/circle_icon01.png" name="icon">
+
+        <hr>
+
+        <img src="./../asset/images/dog01.jpg" name="viewer">
+
+        <hr>
+
+        <img src="./../asset/images/0.png" name="num">
+
+        <script>
+            function m1() {
+                document.images['cat1'].src = './../asset/images/cat02.jpg';
+            }
+
+            document.all['btn'].onclick = m1;
+
+            function m2() {
+                document.images['cat2'].src = './../asset/images/cat02.jpg';
+            }
+
+            function m3() {
+                document.images['cat2'].src = './../asset/images/cat01.jpg';
+            }
+
+            document.images['cat2'].onmouseover = m2;
+            document.images['cat2'].onmouseout = m3;
+
+            function m4() {
+                if (document.images['sw'].src.endsWith('switch_on.png')) {
+                    document.body.text = 'white';
+                    document.body.bgColor = 'black';
+                    document.images['sw'].src = './../asset/images/switch_off.png';
+                } else {
+                    document.body.text = 'black';
+                    document.body.bgColor = 'white';
+                    document.images['sw'].src = './../asset/images/switch_on.png';
+                }
+            }
+
+            document.images['sw'].onclick = m4;
+
+            var n = 1;
+
+            function m5() {
+                n++;
+
+                if (n > 18) {
+                    n = 1;
+                }
+
+                document.images['icon'].src = './../asset/images/circle_icon' + (n + '').padStart(2, '0') + '.png';
+            }
+
+            document.images['icon'].onclick = m5;
+
+            var no = 1;
+
+            function m6() {
+                if (event.keyCode == 37) {
+                    no--;
+
+                    if (no < 1) {
+                        // no++;
+                        // return;
+
+                        no = 5;
+                    }
+                } else if (event.keyCode == 39) {
+                    no++;
+
+                    if (no > 5) {
+                        // no--;
+                        // return;
+
+                        no = 1;
+                    }
+                }
+                
+                document.images['viewer'].src = './../asset/images/dog0' + no + '.jpg';
+            }
+
+            // window.onkeydown = m6;
+
+            function m7() {
+                if ((event.keyCode >= 48) && (event.keyCode <= 57)) {
+                    document.images['num'].src = './../asset/images/' + (event.keyCode - 48) + '.png';
+                }
+            }
+
+            window.onkeydown = m7;
+        </script>
+    </body>
+</html>
