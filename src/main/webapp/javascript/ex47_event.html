@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex47_event</title>
+        <style>
+            #tbl {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            #tbl td {
+                width: 126px;
+                height: 126px;
+                border: 1px solid black;
+            }
+            #tbl td img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>테이블</h1>
+
+        <table id="tbl">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <script>
+            const list = document.querySelectorAll('#tbl td');
+
+            window.oncontextmenu = function () {
+                return false;
+            };
+
+            for (let i = 0; i < list.length; i++) {
+                list[i].onmousedown = function () {
+                    if (event.buttons == 1) {
+                        if (event.target.nodeName == 'TD') {
+                            let img = document.createElement('img');
+
+                            img.setAttribute('src', './../asset/images/rect_icon01.png');
+                        
+                            event.target.appendChild(img);
+                        } else {
+                            event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+
+                            let img = document.createElement('img');
+
+                            img.setAttribute('src', './../asset/images/rect_icon01.png');
+                        
+                            event.currentTarget.appendChild(img);
+                        }
+                    } else if (event.buttons == 2) {
+                        if (event.target.nodeName == 'TD') {
+                            let img = document.createElement('img');
+
+                            img.setAttribute('src', './../asset/images/rect_icon02.png');
+                        
+                            event.target.appendChild(img);
+                        } else {
+                            event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+
+                            let img = document.createElement('img');
+
+                            img.setAttribute('src', './../asset/images/rect_icon02.png');
+                        
+                            event.currentTarget.appendChild(img);
+                        }
+                    } else if (event.buttons == 4) {
+                        // event.target.parentElement.removeChild(event.target);
+
+                        event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+                    }
+                };
+            }
+        </script>
+    </body>
+</html>
