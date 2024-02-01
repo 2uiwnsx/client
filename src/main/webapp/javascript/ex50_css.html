@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex50_css</title>
+        <style>
+            body {
+                margin-bottom: 35px;
+            }
+            #box {
+                width: 250px;
+                height: 200px;
+                border: 1px solid black;
+            }
+            .one {
+                font-size: 3rem;
+            }
+            .two {
+                color: cornflowerblue;
+            }
+            .three {
+                text-decoration: underline;
+            }
+        </style>
+        <script src="https://kit.fontawesome.com/f1d09bde32.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>CSS</h1>
+
+        <input type="button" id="btn1" value="버튼">
+
+        <hr>
+
+        <div id="box">상자</div>
+
+        <hr>
+
+        <h1>텍스트</h1>
+
+        <div class="tool">
+            <button type="button" id="btn2"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" id="btn3"><i class="fa-solid fa-minus"></i></button>
+        </div>
+
+        <p id="content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis explicabo voluptates dolore hic illo atque voluptas, et quam asperiores ducimus perferendis repudiandae iusto rerum facere dolor necessitatibus iure quo cumque exercitationem consequatur rem culpa? Velit eaque omnis eius, ullam ab iusto autem. Voluptates assumenda sit voluptas temporibus quasi delectus adipisci deleniti dolore enim, repellendus suscipit veniam, libero quos praesentium, est dolor officia optio. Est soluta praesentium iusto facere porro dignissimos in. Velit labore, dolorum nam ex, quod ullam quo esse possimus iste omnis eius asperiores aspernatur dicta? Dignissimos dolore a perspiciatis, sed eum adipisci sunt aspernatur asperiores hic quos totam illum ab labore minima vero maiores quod voluptatibus repellat quam error placeat laudantium doloremque accusamus pariatur. Alias quaerat corrupti numquam fugit error repellat maxime tempora, enim consequatur nemo distinctio earum voluptatum adipisci eos eligendi cupiditate incidunt commodi vero itaque. Earum officiis vel laudantium voluptas eveniet ipsa obcaecati magnam corrupti repellat aliquid. At doloremque assumenda facere ipsum nobis repellat molestiae voluptates inventore, reiciendis nemo, vero illo eveniet veritatis aliquam exercitationem atque. Aliquid ipsa eligendi vero officia! Cum dolorum accusamus fuga ducimus dolorem mollitia repudiandae officiis eaque harum necessitatibus, placeat, natus error doloremque perferendis, nihil soluta iste consequatur qui fugiat non illum doloribus numquam. Ex iusto animi voluptate repudiandae ipsam impedit dolorem fugit quidem consectetur accusantium eius qui sapiente saepe ut tempore enim autem nam, quis beatae natus. Perferendis quisquam molestias ipsa similique id deserunt porro, vel assumenda consequuntur eaque nobis ab tempore nesciunt natus, voluptatum adipisci perspiciatis ullam. Quibusdam in blanditiis iure, qui a obcaecati perspiciatis ipsa deleniti omnis aliquam, id dolor nostrum dolores magnam rem recusandae dolorum eveniet esse. Cumque, ratione? Provident ad beatae, alias suscipit vel, repudiandae minima consectetur facere unde maiores perferendis aut tempora perspiciatis non facilis culpa et. Architecto aut accusamus itaque ex ut nulla aperiam vitae?
+        </p>
+
+        <script>
+            const btn1 = document.getElementById('btn1');
+            const box = document.getElementById('box');
+
+            btn1.addEventListener('click', function () {
+                // box.style = 'font-size: 2rem; color: blue; background-color: gold;';
+
+                // box.setAttribute('style', 'font-size: 2rem; color: blue; background-color: gold;');
+
+                // box.style.fontSize = '2rem';
+                // box.style.color = 'blue';
+                // box.style.backgroundColor = 'gold';
+
+                // box.style['font-size'] = '2rem';
+                // box.style['color'] = 'blue';
+                // box.style['background-color'] = 'gold';
+
+                const list = window.getComputedStyle(box);
+
+                alert(list.width);
+                alert(list.getPropertyValue('height'));
+            });
+
+            const btn2 = document.getElementById('btn2');
+            const btn3 = document.getElementById('btn3');
+            const content = document.getElementById('content');
+
+            let size = 16;
+
+            btn2.addEventListener('click', function () {
+                // size++;
+                // content.style.fontSize = size + 'px';
+
+                // content.className = 'one two';
+
+                content.classList.add('one');
+                content.classList.add('two');
+            });
+
+            btn3.addEventListener('click', function () {
+                // size--;
+                // content.style.fontSize = size + 'px';
+
+                // content.className += ' three';
+
+                content.classList.remove('two');
+                content.classList.add('three');
+            });
+        </script>
+    </body>
+</html>
