@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex41_function</title>
+    </head>
+    <body>
+        <input type="button" id="btn1" value="버튼1">
+        <input type="button" id="btn2" value="버튼2">
+        <input type="button" id="btn3" value="버튼3">
+        <input type="button" id="btn4" value="버튼4">
+
+        <script>
+            function m1() {
+                console.log('m1');
+            }
+
+            m1();
+
+            function m2() {
+                console.log('m2');
+            }
+
+            m2();
+
+            let f1 = m2;
+
+            f1();
+
+            let f2 = function m3() {
+                console.log('m3');
+            };
+
+            // Uncaught ReferenceError: m3 is not defined.
+            // m3();
+
+            f2();
+
+            let f3 = function () {
+                console.log('익명 함수');
+            };
+
+            f3();
+
+            function p1() {
+                alert('btn1 ➜ ' + event.buttons);
+            }
+
+            // Uncaught TypeError: Cannot read properties of undefined (reading 'buttons').
+            // p1();
+
+            document.getElementById('btn1').onmousedown = p1;
+
+            document.getElementById('btn2').onclick = function () {
+                alert('btn2');
+            };
+
+            function p2() {
+                alert('btn3');
+            }
+
+            document.getElementById('btn3').addEventListener('click', p2);
+
+            document.getElementById('btn4').addEventListener('click', function () {
+                alert('btn4');
+            });
+
+            function m4() {
+                console.log('m4');
+            }
+
+            function m5(f) {
+                f();
+            }
+
+            m5(m4);
+            m5(function () {
+                console.log('익명 함수');
+            });
+
+            function m6() {
+                console.log('m6');
+            }
+
+            function m7() {
+                return m6;
+            }
+
+            m7()();
+
+            let temp = m7();
+
+            temp();
+
+            setTimeout(function () {
+                console.log('타이머');
+            }, 3000);
+        </script>
+    </body>
+</html>
