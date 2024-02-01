@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex37_manipulation</title>
+        <style>
+            .table {
+                border: 1px solid gray;
+                border-collapse: collapse;
+            }
+            .table td {
+                border: 1px solid gray;
+                padding: 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM 조작</h1>
+
+        <input type="button" id="btn1" value="버튼1">
+        <input type="button" id="btn2" value="버튼2">
+        <input type="button" id="btn3" value="버튼3">
+        <input type="button" id="btn4" value="버튼4">
+
+        <hr>
+
+        <div id="div"></div>
+
+        <script>
+            var div = document.getElementById('div');
+
+            function m1() {
+                var input = document.createElement('input');
+
+                var type = document.createAttribute('type');
+
+                type.value = 'text';
+
+                input.setAttributeNode(type);
+                input.setAttribute('size', '10');
+
+                div.appendChild(input);
+
+                var p = document.createElement('p');
+
+                p.setAttribute('align', 'center');
+                p.textContent = '문단입니다.';
+
+                div.appendChild(p);
+            }
+
+            document.getElementById('btn1').addEventListener('click', m1);
+
+            function m2() {
+                // div.removeChild(div.firstElementChild);
+
+                div.removeChild(div.lastElementChild);
+            }
+
+            document.getElementById('btn2').addEventListener('click', m2);
+
+            function m3() {
+                div.removeChild(event.target);
+            }
+
+            function m4() {
+                for (var i = 1; i <= 5; i++) {
+                    var img = document.createElement('img');
+
+                    img.setAttribute('src', './../asset/images/catty0' + i + '.png');
+                    img.addEventListener('click', m3);
+
+                    div.appendChild(img);
+                }
+            }
+
+            document.getElementById('btn3').addEventListener('click', m4);
+
+            function m5() {
+                event.target.bgColor = 'gold';
+            }
+
+            function m6() {
+                var table = document.createElement('table');
+
+                table.className = 'table';
+
+                for (var i = 0; i < 3; i++) {
+                    var tr = document.createElement('tr');
+
+                    for (var j = 0; j < 3; j++) {
+                        var td = document.createElement('td');
+                        
+                        td.textContent = 'item';
+                        td.addEventListener('click', m5);
+                        
+                        tr.appendChild(td);
+                    }
+
+                    table.appendChild(tr);
+                }
+
+                div.appendChild(table);
+            }
+
+            document.getElementById('btn4').addEventListener('click', m6);
+        </script>
+    </body>
+</html>
