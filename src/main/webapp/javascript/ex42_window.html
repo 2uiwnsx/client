@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex42_window</title>
+    </head>
+    <body>
+        <script>
+            const hong = {
+                name: '홍길동'
+            };
+
+            console.log(hong);
+
+            hong.age = 20;
+
+            console.log(hong.age);
+
+            hong.greeting = function () {
+                console.log('Hello!');
+            };
+
+            hong.greeting();
+
+            function m1() {
+                console.log('m1');
+            }
+
+            window.m1();
+
+            var a1 = '홍길동';
+
+            console.log(window.a1);
+
+            let a2 = '하하하';
+
+            console.log(window.a2);
+
+            const a3 = '호호호';
+
+            console.log(window.a3);
+
+            const obj = {
+                name: '객체',
+                age: 20
+            };
+
+            for (let p in obj) {
+                console.log(p, obj[p]);
+            }
+        </script>
+    </body>
+</html>
