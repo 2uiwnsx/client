@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex38_variable</title>
+    </head>
+    <body>
+        <div id="list">
+            <img src="./../asset/images/catty01.png">
+            <img src="./../asset/images/catty02.png">
+            <img src="./../asset/images/catty03.png">
+            <img src="./../asset/images/catty04.png">
+            <img src="./../asset/images/catty05.png">
+        </div>
+
+        <script>
+            var a = 10;
+
+            console.log('a:', a);
+
+            var a = 20;
+
+            console.log('a:', a);
+
+            // 전역 변수
+            let b = 30;
+
+            console.log('b:', b);
+
+            // Cannot redeclare block-scoped variable 'b'.
+            // let b = 40;
+
+            function m1() {
+                // 지역 변수
+                let c = 50;
+
+                console.log('c:', c);
+            }
+
+            m1();
+
+            // Uncaught ReferenceError: c is not defined.
+            // console.log('c:', c);
+
+            if (b > 0) {
+                // 전역 변수
+                var d = 60;
+
+                console.log('d:', d);
+
+                // 지역 변수
+                let e = 70;
+
+                console.log('e:', e);
+            }
+
+            console.log('d:', d);
+
+            // Uncaught ReferenceError: e is not defined.
+            // console.log('e:', e);
+
+            const PI = 3.14;
+
+            console.log('PI:', PI);
+
+            // Uncaught TypeError: Assignment to constant variable.
+            // PI = 5.28;
+
+            const list = document.getElementById('list');
+
+            function m2() {
+                event.target.width += 10;
+            }
+
+            for (let i = 0; i < list.children.length; i++) {
+                list.children[i].onclick = m2;
+            }
+        </script>
+    </body>
+</html>
