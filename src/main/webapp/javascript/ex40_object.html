@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex40_object</title>
+    </head>
+    <body>
+        <script>
+            const hong = new Object();
+
+            hong.name = '홍길동';
+            hong.age = 20;
+            hong.address = '서울시 강남구 역삼동';
+            hong['phone-number'] = '010-1234-5678';
+
+            console.log(hong);
+
+            const lee = new Object();
+
+            lee.name = '이순신';
+            lee.age = 25;
+            lee.addr = '서울시 강남구 대치동';
+
+            console.log(lee.name);
+            console.log(lee.age);
+            console.log(lee.address);
+
+            const kwon = {};
+
+            kwon.name = '권율';
+            kwon.age = 30;
+            kwon.address = '서울시 강남구 개포동';
+
+            console.log(kwon);
+
+            const park = {
+                name: '박명수',
+                age: 40,
+                address: '서울시 강남구 논현동'
+            };
+
+            console.log(park);
+
+            const address = {
+                si: '서울시',
+                gu: '강남구',
+                dong: '압구정동'
+            };
+
+            const kim = {
+                name: '김연아',
+                age: 30,
+                address: address
+            };
+
+            console.log(kim);
+
+            const yu = {
+                name: '유재석',
+                age: 35,
+                address:  {
+                    si: '서울시',
+                    gu: '강남구',
+                    dong: '신사동'
+                }
+            };
+
+            console.log(yu.address.si);
+            console.log(yu.address.gu);
+            console.log(yu.address.dong);
+
+            function m1() {
+                alert('안녕하세요.');
+            }
+
+            const yang = {
+                name: '양세찬',
+                age: 25,
+                introduction: m1
+            };
+
+            yang.introduction();
+        </script>
+    </body>
+</html>
