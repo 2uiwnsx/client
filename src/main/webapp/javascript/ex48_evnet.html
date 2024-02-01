@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex48_event</title>
+        <style>
+            #tbl {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            #tbl td {
+                width: 60px;
+                height: 60px;
+                border: 1px solid black;
+            }
+            #tbl td img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="tbl">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <script>
+            const list = document.querySelectorAll('#tbl td');
+
+            for (let i = 0; i < list.length; i++) {
+                list[i].onmouseenter = function () {
+                    if (event.currentTarget.children.length == 0) {
+                        const img = document.createElement('img');
+                        
+                        if (event.ctrlKey) {
+                            img.setAttribute('src', './../asset/images/rect_icon01.png');
+                        } else if (event.shiftKey) {
+                            img.setAttribute('src', './../asset/images/rect_icon02.png');
+                        } else if (event.altKey) {
+                            img.setAttribute('src', './../asset/images/rect_icon03.png');
+                        } else {
+                            img.setAttribute('src', './../asset/images/rect_icon04.png');
+                        }
+
+                        event.currentTarget.appendChild(img);
+                    }
+                };
+
+                list[i].onmouseleave = function () {
+                    event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+                };
+            }
+        </script>
+    </body>
+</html>
