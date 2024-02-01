@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex45_event</title>
+        <style>
+            .box {
+                padding: 50px;
+            }
+            #p1 {
+                background-color: tomato;
+            }
+            #p2 {
+                background-color: gold;
+            }
+            #p3 {
+                text-align: center;
+                background-color: cornflowerblue;
+            }
+            #p4 {
+                background-color: lightpink;
+            }
+            #p5 {
+                background-color: lightyellow;
+            }
+            #p6 {
+                text-align: center;
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="p1" class="box">
+            <div id="p2" class="box">
+                <div id="p3" class="box">이벤트 버블링</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="p4" class="box">
+            <div id="p5" class="box">
+                <div id="p6" class="box">이벤트 캡처링</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <input type="text" id="txt">
+
+        <hr>
+
+        <img src="./../asset/images/catty01.png" id="cat">
+
+        <script>
+            const p1 = document.getElementById('p1');
+            const p2 = document.getElementById('p2');
+            const p3 = document.getElementById('p3');
+            const p4 = document.getElementById('p4');
+            const p5 = document.getElementById('p5');
+            const p6 = document.getElementById('p6');
+
+            p1.onclick = function () {
+                alert('빨강');
+            };
+
+            p2.onclick = function () {
+                alert('노랑'); 
+
+                event.cancelBubble = true;
+            };
+
+            p3.onclick = function () {
+                alert('파랑');
+            };
+
+            p4.addEventListener('click', function () {
+                alert('빨강');
+            }, true);
+
+            p5.addEventListener('click', function () {
+                alert('노랑');
+                
+                event.stopPropagation();
+            }, true);
+
+            p6.addEventListener('click', function () {
+                alert('파랑');
+            }, true);
+
+            document.getElementById('txt').onkeydown = function () {
+                // event.cancelBubble = true;
+
+                event.stopPropagation();
+            };
+
+            window.onkeydown = function () {
+                if (event.keyCode == 37) {
+                    document.getElementById('cat').width -= 10;
+                } else if (event.keyCode == 39) {
+                    document.getElementById('cat').width += 10;
+                } else if (event.keyCode == 71) {
+                    location.href = 'https://google.com';
+                }
+            };
+        </script>
+    </body>
+</html>
