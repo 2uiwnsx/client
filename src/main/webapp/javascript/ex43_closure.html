@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex43_closure</title>
+    </head>
+    <body>
+        <input type="button" id="btn1" value="버튼1">
+        <input type="button" id="btn2" value="버튼2">
+
+        <script>
+            // 전역 함수
+            function outer() {
+                let a = 10;
+
+                console.log('a:', a);
+
+                // 지역 함수
+                function inner() {
+                    let b = 20;
+
+                    console.log('b:', b);
+                }
+
+                inner();
+            }
+
+            outer();
+
+            // Uncaught ReferenceError: inner is not defined.
+            // inner();
+
+            const btn1 = document.getElementById('btn1');
+            const btn2 = document.getElementById('btn2');
+
+            let num1 = 100;
+
+            btn1.onclick = function () {
+                let num2 = 200;
+
+                btn2.onclick = function () {
+                    alert(num1);
+                    alert(num2);
+                };
+            };
+        </script>
+    </body>
+</html>
