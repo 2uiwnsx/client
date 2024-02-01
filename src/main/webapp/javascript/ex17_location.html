@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex17_location</title>
+    </head>
+    <body>
+        <h1>Location</h1>
+
+        <form name="form">
+            <input type="button" name="btn" value="버튼">
+        </form>
+
+        <ul>
+            <li><a href="https://naver.com">네이버(n)</a></li>
+            <li><a href="https://google.com">구글(g)</a></li>
+            <li><a href="https://daum.net">다음(d)</a></li>
+        </ul>
+
+        <script>
+            function m1() {
+                console.log(window.location.href);
+                
+                window.location.reload();
+            }
+
+            window.document.form.btn.onclick = m1;
+
+            function m2() {
+                if (event.keyCode == 78) {
+                    window.location.href = 'https://naver.com';
+                } else if (event.keyCode == 71) {
+                    window.location.href = 'https://google.com';
+                } else if (event.keyCode == 68) {
+                    window.location.assign('https://daum.net');
+                }
+            }
+
+            window.onkeydown = m2;
+        </script>
+    </body>
+</html>
