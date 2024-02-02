@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex07_manipulation</title>
+    </head>
+    <body>
+        <h1>jQuery 조작</h1>
+
+        <input type="button" id="btn" value="버튼">
+
+        <hr>
+
+        <div id="box"></div>
+
+        <hr>
+
+        <input type="text" id="txt">
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            let n = 1;
+
+            $('#btn').click(function () {
+                // $('#box').text('홍길동');
+
+                // $('#box').html($('#box').html() + `<img src="./../asset/images/catty0${n}.png">`);
+
+                // $('#box').append(`<img src="./../asset/images/catty0${n}.png">`);
+
+                // $(`<img src="./../asset/images/catty0${n}.png">`).appendTo('#box');
+
+                // $('#box').html(`<img src="./../asset/images/catty0${n}.png">` + $('#box').html());
+
+                // $('#box').prepend(`<img src="./../asset/images/catty0${n}.png">`);
+
+                // $(`<img src="./../asset/images/catty0${n}.png">`).prependTo('#box');
+
+                n++;
+
+                if (n > 9) {
+                    n = 1;
+                }
+
+                // $('#txt').val('기본값');
+
+                // $('#txt').attr('size', 50);
+
+                // $('#txt').prop('disabled', true);
+
+                $('#txt').remove();
+            });
+        </script>
+    </body>
+</html>
