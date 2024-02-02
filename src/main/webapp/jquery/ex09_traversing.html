@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex09_traversing</title>
+        <style>
+            #tbl {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            #tbl td {
+                border: 1px solid black;
+                padding: 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="tbl">
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+        </table>
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            // $('#tbl tr').mouseover(function () {
+            //     $(event.currentTarget).css('background-color', 'gold');
+            // });
+            // $('#tbl tr').mouseout(function () {
+            //     $(event.currentTarget).css('background-color', 'transparent');
+            // });
+
+            // $('#tbl tr')
+            //     .mouseover(function () {
+            //         $(event.currentTarget).css('background-color', 'gold');
+            //     }).mouseout(function () {
+            //         $(event.currentTarget).css('background-color', 'transparent');
+            //     });
+
+            $('#tbl tr').on({
+                mouseover: function () {
+                    // $(event.currentTarget).css('background-color', 'gold');
+
+                    $(this).css('background-color', 'gold');
+                },
+                mouseout: function () {
+                    // $(event.currentTarget).css('background-color', 'transparent');
+
+                    $(this).css('background-color', 'transparent');
+                }
+            });
+        </script>
+    </body>
+</html>
