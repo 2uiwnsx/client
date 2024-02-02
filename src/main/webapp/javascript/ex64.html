@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex64</title>
+    </head>
+    <body>
+        <input type="button" id="btn1" value="버튼1">
+        <input type="button" id="btn2" value="버튼2">
+
+        <script>
+            function f1() {
+                console.log('Regular Function');
+            };
+
+            f1();
+
+            const f2 = function () {
+                console.log('Anonymous Function');
+            };
+
+            f2();
+
+            (function () {
+                console.log('Immediately Invoked Function Expression');
+            })();
+
+            const f3 = () => {
+                console.log('Arrow Function');
+            };
+
+            f3();
+
+            const f4 = () => console.log('Arrow Function');
+
+            f4();
+
+            const f5 = (num) => console.log(num);
+
+            f5(10);
+
+            const f6 = num => console.log(num);
+
+            f6(20);
+
+            const f7 = (a, b) => console.log(a, b);
+
+            f7(30, 40);
+
+            const f8 = () => {
+                return 100;
+            };
+
+            console.log(f8());
+
+            const f9 = () => 100;
+
+            console.log(f9());
+
+            console.clear();
+
+            document.getElementById('btn1').onclick = function () {
+                // alert(event.srcElement.value);
+                // alert(event.target.value);
+                // alert(event.currentTarget.value);
+                // alert(this.value);
+
+                alert(document.getElementById('btn1').value);
+            };
+
+            document.getElementById('btn2').onclick = () => {
+                alert(this.value);
+            };
+
+            const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            for (let i = 0; i < nums.length; i++) {
+                console.log(nums[i]);
+            };
+
+            for (let p in nums) {
+                console.log(nums[p]);
+            };
+
+            nums.forEach(function (num) {
+                console.log(num);
+            });
+
+            console.clear();
+
+            const fruits = ['사과', '포도', '딸기', '바나나', '귤', '앵두', '자두', '배', '참외', '수박', '복숭아'];
+
+            fruits.forEach(f => console.log(f));
+            fruits.forEach((f, index) => console.log(f, index));
+            fruits.forEach((f, index, list) => console.log(f, index, list));
+
+            console.clear();
+
+            console.log(nums.map(n => ((n % 2 == 0) ? '짝수' : '홀수')));
+
+            fruits.map(item => item.length).forEach(length => console.log(length));
+
+            const names = ['홍길동', '아무개', '하하하'];
+
+            const list1 = [];
+
+            for (let i = 0; i < names.length; i++) {
+                const o1 = {
+                    name: names[i],
+                    age: 20,
+                    address: '서울시 강남구 역삼동'
+                };
+
+                list1[i] = o1;
+            }
+
+            console.log(list1);
+
+            const list2 = names.map(name => {
+                return {
+                    name: name,
+                    age: 20,
+                    address: '서울시 강남구 역삼동'
+                };
+            });
+
+            console.log(list2);
+
+            console.log(nums.filter(num => (num % 2 == 0)));
+            console.log(fruits.filter(item => (item.length >= 3)));
+
+            console.log(fruits.find(item => (item.length >= 3)));
+        </script>
+    </body>
+</html>
