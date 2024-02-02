@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex04_effect</title>
+        <style>
+            #box {
+                width: 200px;
+                height: 200px;
+                background-color: gold;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jQuery Effect</h1>
+
+        <input type="button" id="btn1" class="btn" value="버튼1">
+        <input type="button" id="btn2" class="btn" value="버튼2">
+        <input type="button" id="btn3" class="btn" value="버튼3">
+
+        <hr>
+
+        <div id="box">상자</div>
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            let n = 1;
+
+            $('#btn1').click(function () {
+                // $('#box').hide('fast');
+
+                // $('#box').fadeOut('fast');
+
+                // $('#box').slideUp('fast');
+
+                // const obj = {
+                //     width: '400px',
+                //     height: '400px'
+                // };
+                // $('#box').animate(obj, 'fast');
+
+                // $('#box').animate({
+                //     width: 0,
+                //     height: 0,
+                //     opacity: 0
+                // }, 'slow');
+
+                // $('#box').animate({
+                //     width: '+=100px',
+                //     height: '+=50'
+                // }, 'fast');
+
+                $('#box').animate({
+                    marginTop: '+=50px',
+                    'margin-left': '+=50px'
+                }, 'slow', function () {
+                    $('h1').text('jQuery Effect ' + n);
+                    
+                    n++;
+
+                    if (n > 5) {
+                        $('#btn1').off('click');
+                    }
+                });
+            });
+
+            $('#btn2').click(function () {
+                // $('#box').show('slow');
+
+                // $('#box').fadeIn('slow');
+
+                // $('#box').slideDown('slow');
+
+                // $('#box').animate({
+                //     width: '400px'
+                // }, 2000, function () {
+                //     $('#box').animate({
+                //         height: '400px'
+                //     }, 500);
+                // });
+
+                // $('#box').animate({
+                //     width: '400px'
+                // }, 2000);
+                // $('#box').animate({
+                //     height: '400px'
+                // }, 500);
+
+                // $('#box').animate({
+                //     width: '400px'
+                // }, 2000).animate({
+                //     height: '400px'
+                // }, 500);
+
+                $('#box')
+                    .slideUp()
+                    .slideDown()
+                    .fadeOut()
+                    .fadeIn()
+                    .animate({
+                        borderWidth: '10px'
+                    });
+            });
+
+            $('#btn3').click(function () {
+                // $('#box').toggle(1000);
+
+                // $('#box').fadeToggle(1000);
+
+                $('#box').slideToggle(1000);
+            });
+        </script>
+    </body>
+</html>
