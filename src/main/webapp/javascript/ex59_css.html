@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex59_css</title>
+        <style>
+            #menu {
+                display: flex;
+                width: 630px;
+                margin: 0 auto;
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                transform: translate(0, -100px);
+            }
+            #menu img {
+                transition: all 0.5s;
+            }
+            /* #menu img:hover {
+                transform: translate(0, 100px);
+            } */
+        </style>
+    </head>
+    <body>
+        <nav id="menu">
+            <img src="./../asset/images/rect_icon01.png">
+            <img src="./../asset/images/rect_icon02.png">
+            <img src="./../asset/images/rect_icon03.png">
+            <img src="./../asset/images/rect_icon04.png">
+            <img src="./../asset/images/rect_icon05.png">
+        </nav>
+
+        <script>
+            const item = document.querySelectorAll('#menu img');
+
+            let oldItem = null;
+
+            for (let i = 0; i < item.length; i++) {
+                item[i].onclick = function () {
+                    if (oldItem != null) {
+                        oldItem.style.transform = 'translate(0, 0)';
+                    }
+
+                    if (event.target != oldItem) {
+                        oldItem = event.target;
+
+                        oldItem.style.transform = 'translate(0, 100px)';
+                    } else {
+                        oldItem.style.transform = 'translate(0, 0)';
+                        
+                        oldItem = null;
+                    } 
+                };
+            }
+        </script>
+    </body>
+</html>
