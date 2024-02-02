@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex60_css</title>
+        <style>
+            #box {
+                width: 250px;
+                height: 188px;
+                border: 10px solid cornflowerblue;
+                overflow: hidden;
+            }
+            #list {
+                display: flex;
+                width: 1250px;
+                transition: all 1s;
+            }
+            /* #box:hover #list {
+                transform: translate(-1000px, 0);
+            } */
+        </style>
+    </head>
+    <body>
+        <h1>고양이</h1>
+
+        <div id="box">
+            <div id="list">
+                <img src="./../asset/images/cat01.jpg">
+                <img src="./../asset/images/cat02.jpg">
+                <img src="./../asset/images/cat03.jpg">
+                <img src="./../asset/images/cat04.jpg">
+                <img src="./../asset/images/cat05.jpg">
+            </div>
+        </div>
+
+        <hr>
+
+        <select id="sel">
+            <option value="0">고양이1</option>
+            <option value="1">고양이2</option>
+            <option value="2">고양이3</option>
+            <option value="3">고양이4</option>
+            <option value="4">고양이5</option>
+        </select>
+
+        <script>
+            const list = document.getElementById('list');
+            const sel = document.getElementById('sel');
+
+            sel.addEventListener('change', function () {
+                list.style.transform = `translate(-${250 * sel.value}px, 0)`;
+            });
+
+            window.onkeydown = function () {
+                if ((event.keyCode >= 49) && (event.keyCode <= 53)) {
+                    list.style.transform = `translate(-${250 * (event.keyCode - 49)}px, 0)`;
+                }
+            };
+        </script>
+    </body>
+</html>
