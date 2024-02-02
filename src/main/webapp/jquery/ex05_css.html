@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex05_css</title>
+        <style>
+            .one {
+                font-size: 3rem;
+            }
+            .two {
+                color: red
+            }
+            .three {
+                background-color: gold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jQuery + CSS</h1>
+
+        <input type="button" id="btn" value="버튼">
+
+        <hr>
+
+        <div id="box">상자</div>
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            $('#btn').click(function () {
+                // $('#box')
+                //     .css('font-size', '3rem')
+                //     .css('color', 'red')
+                //     .css('backgroundColor', 'gold');
+                
+                // $('#box').css({
+                //     fontSize: '3rem',
+                //     color: 'red',
+                //     'background-color': 'gold'
+                // });
+
+                // $('#box').addClass('one');
+                // $('#box').addClass('two');
+                // $('#box').addClass('three');
+                // $('#box').removeClass('two');
+
+                $('#box').toggleClass('three');
+            });
+        </script>
+    </body>
+</html>
