@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex01</title>
+    </head>
+    <body>
+        <input type="text" name="txt" id="txt">
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            // BOM
+            document.all.txt.value = 'BOM';
+
+            // DOM
+            document.getElementById('txt').value = 'DOM';
+
+            // jQuery
+            jQuery('#txt').val('jQuery');
+        </script>
+    </body>
+</html>
