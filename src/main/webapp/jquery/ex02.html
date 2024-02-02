@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex02</title>
+    </head>
+    <body>
+        <h1>jQuery</h1>
+
+        <input type="button" name="btn" id="btn" value="확인">
+
+        <hr>
+
+        <div id="box1" class="box">상자1</div>
+        <div id="box2" class="box">상자2</div>
+        <div id="box3" class="box">상자3</div>
+        <div id="box4" class="box">상자4</div>
+        <div id="box5" class="box">상자5</div>
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            const btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function () {
+                const list = document.getElementsByClassName('box');
+
+                // for (let i = 0; i < list.length; i++) {
+                //     list[i].style.color = 'red';
+                // }
+
+                Array.from(list).forEach(box => (box.style.color = 'red'));
+
+                jQuery('.box').css('color', 'blue');
+
+                const a = document.all.btn;
+                const b = document.getElementById('btn');
+                const c = jQuery('#btn');
+
+                console.log(a === b);
+                console.log(a == c);
+
+                // a.value = 'Ok';
+
+                // b.setAttribute('value', 'Ok');
+
+                c.val('Ok');
+            });
+        </script>
+    </body>
+</html>
