@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex56_css</title>
+        <style>
+            .box {
+                width: 150px;
+                height: 150px;
+                background-color: gold;
+                border: 1px solid black;
+            }
+            .draggable {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="draggable">Drag & Drop</h1>
+
+        <div id="box1" class="box draggable">상자1</div>
+        <div id="box2" class="box draggable">상자2</div>
+        <div id="box3" class="box draggable">상자3</div>
+
+        <img src="./../asset/images/catty01.png" class="draggable">
+
+        <script>
+            let obj;
+
+            let isDown = false;
+            let bx = 0;
+            let by = 0;
+            let x = 0;
+            let y = 0;
+
+            window.onmousedown = function () {
+                if (event.target.classList.contains('draggable')) {
+                    obj = event.target;
+
+                    isDown = true;
+                    bx = obj.getBoundingClientRect().x - parseInt((obj.style.left == '') ? 0 : obj.style.left);
+                    by = obj.getBoundingClientRect().y - parseInt((obj.style.top == '') ? 0 : obj.style.top);
+                    x = event.offsetX;
+                    y = event.offsetY;
+                }
+            };
+
+            window.onmousemove = function () {
+                if (isDown) {
+                    obj.style.top = (event.clientY - by - y) + 'px';
+                    obj.style.left = (event.clientX - bx - x) + 'px';
+
+                    event.stopPropagation();
+
+                    return false;
+                }
+            };
+
+            window.onmouseup = function () {
+                isDown = false;
+            };
+        </script>
+    </body>
+</html>
