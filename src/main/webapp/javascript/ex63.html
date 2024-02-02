@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex63</title>
+    </head>
+    <body>
+        <script>
+            const o1 = new Object();
+            
+            o1.name = '홍길동';
+            o1.greeting = function () {
+                console.log('Hello!');
+            };
+
+            const o2 = {};
+
+            o2.name = '아무개';
+            o2.greeting = function () {
+                console.log('안녕!');
+            };
+
+            function User(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            const o3 = new User('하하하', 20);
+
+            console.log(o3.name);
+            console.log(o3.age);
+
+            const o4 = new User('호호호', 25);
+
+            console.log(o4.name);
+            console.log(o4.age);
+
+            const arr = {
+                0: '사과',
+                1: '귤',
+                2: '바나나',
+                length: 3
+            };
+
+            console.log(arr[0]);
+            console.log(arr[1]);
+            console.log(arr[2]);
+            console.log(arr.length);
+
+            const info = {};
+            const date = new Date();
+            const array = new Array();
+
+            console.log(typeof info);
+            console.log(typeof date);
+            console.log(typeof array);
+
+            console.log(date.constructor.name);
+            console.log(array.constructor.name);
+
+            const o5 = {
+                name: '후후후',
+                age: 20,
+                info: function () {
+                    console.log(this.name, this.age);
+                }
+            };
+
+            o5.info();
+
+            function m1() {
+                console.log(this.name, this.age);
+            };
+
+            m1();
+
+            const o6 = {
+                name: '호호호',
+                age: 27,
+                info: m1
+            };
+
+            o6.info();
+        </script>
+    </body>
+</html>
