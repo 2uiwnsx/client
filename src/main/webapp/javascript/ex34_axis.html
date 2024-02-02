@@ -1,0 +1,132 @@
+<!--
+    ▶ 노드 객체의 프로퍼티
+
+        ▷ nodeType
+
+            ◆ 요소 노드 : 1
+            ◆ 속성 노드 : 2
+            ◆ 텍스트 노드 : 3
+
+        ▷ nodeName
+
+            ◆ 요소 노드 : 태그명
+            ◆ 속성 노드 : 속성명
+            ◆ 텍스트 노드 : #text
+
+        ▷ nodeValue
+
+            ◆ 요소 노드 : null
+            ◆ 속성 노드 : 속성값
+            ◆ 텍스트 노드 : 문자열
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex34_axis</title>
+        <style>
+            div {
+                border: 1px solid black;
+                padding: 15px;
+                margin: 15px;
+            }
+            #me {
+                border: 10px solid cornflowerblue;
+            }
+            .check {
+                outline: 10px solid coral;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Axis</h1>
+
+        <input type="button" id="btn" value="버튼">
+
+        <hr>
+
+        <div>
+            할아버지
+            
+            <div>
+                큰아버지
+
+                <div>사촌</div>
+            </div>
+            <div>
+                아버지
+
+                <div>큰형</div>
+                <div>작은형</div>
+                <div id="me">
+                    나
+
+                    <div>자식</div>
+                    <div>
+                        자식
+
+                        <div>손자</div>
+                    </div>
+                    <div>자식</div>
+                </div>
+                <div>동생</div>
+                <div>막내동생</div>
+            </div>
+            <div>
+                작은아버지
+
+                <div>사촌</div>
+            </div>
+        </div>
+
+        <script>
+            function m1() {
+                var me = document.getElementById('me');
+
+                // for (var i = 0; i < me.childNodes.length; i++) {
+                //     console.log(me.childNodes[i].nodeType, me.childNodes[i].nodeName, me.childNodes[i].nodeValue);
+                // }
+
+                // for (var i = 0; i < me.childNodes.length; i++) {
+                //     if (me.childNodes[i].nodeType == 1 && me.childNodes[i].nodeName == 'DIV') {
+                //         me.childNodes[i].className = 'check';
+                //     }
+                // }
+
+                // for (var i = 0; i < me.children.length; i++) {
+                //     me.children[i].className = 'check';
+                // }
+                
+                // me.children[1].firstElementChild.className = 'check';
+
+                // me.parentNode.className = 'check';
+                
+                // me.parentElement.className = 'check';
+
+                // me.previousElementSibling.previousElementSibling.className = 'check';
+
+                // me.previousElementSibling.className = 'check';
+
+                // me.nextElementSibling.className = 'check';
+
+                // me.nextElementSibling.nextElementSibling.className = 'check';
+
+                // me.parentElement.parentElement.firstElementChild.className = 'check';
+                
+                // me.parentElement.parentElement.firstElementChild.firstElementChild.className = 'check';
+
+                // me.parentElement.parentElement.lastElementChild.className = 'check';
+
+                // me.parentElement.parentElement.lastElementChild.firstElementChild.className = 'check';
+
+                // me.parentElement.parentElement.className = 'check';
+
+                alert(me.parentElement.parentElement.parentElement.parentElement.parentNode == document);
+            }
+
+            document.getElementById('btn').onclick = m1;
+        </script>
+    </body>
+</html>
