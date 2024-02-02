@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex03</title>
+    </head>
+    <body>
+        <h1>jQuery Event</h1>
+
+        <input type="button" id="btn1" class="btn" value="버튼1">
+        <input type="button" id="btn2" class="btn" value="버튼2">
+        <input type="button" id="btn3" class="btn" value="버튼3">
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            const list = document.querySelectorAll('.btn');
+
+            // for (let i = 0; i < list.length; i++) {
+            //     list[i].onclick = function () {
+            //         alert(event.target.value);
+            //     };
+            // };
+
+            $('.btn').click(function () {
+                alert(event.target.value);
+            });
+
+            $('#btn1').click(function () {
+                alert('btn1');
+            });
+
+            $('#btn2').on('click', function () {
+                alert('btn2');
+            });
+
+            $('#btn3').on('click', function () {
+                $('#btn1').off('click');
+                $('#btn2').off('click');
+            });
+        </script>
+    </body>
+</html>
