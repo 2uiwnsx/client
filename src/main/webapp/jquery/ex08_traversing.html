@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex08_traversing</title>
+        <style>
+            div {
+                border: 1px solid black;
+                padding: 15px;
+                margin: 15px;
+            }
+            #me {
+                border: 10px solid cornflowerblue;
+            }
+            .check {
+                outline: 10px solid coral;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Axis</h1>
+
+        <input type="button" id="btn" value="버튼">
+
+        <hr>
+
+        <div id="div">
+            할아버지
+
+            <div>
+                큰아버지
+
+                <div>사촌</div>
+            </div>
+            <div class="test">
+                아버지
+
+                <div>큰형</div>
+                <div>작은형</div>
+                <div id="me">
+                    나
+
+                    <div>자식</div>
+                    <div>
+                        자식
+
+                        <div>손자</div>
+                        <div class="test">손자</div>
+                        <div class="test">손자</div>
+                    </div>
+                    <div>자식</div>
+                </div>
+                <div>동생</div>
+                <div>막내동생</div>
+            </div>
+            <div>
+                작은아버지
+
+                <div>사촌</div>
+            </div>
+        </div>
+
+        <script src="./../asset/js/jquery-1.12.4.js"></script>
+        <script>
+            $('#btn').click(function () {
+                // $('#me').children().addClass('check');
+
+                // $('#me').children().first().addClass('check');
+
+                // $('#me').children().eq(0).addClass('check');
+
+                // $('#me').children().last().addClass('check');
+
+                // $('#me').children().eq(-1).addClass('check');
+
+                // $('#me').children().children().addClass('check');
+
+                // $('#me > div > div').addClass('check');
+
+                // $('#me').children().children('.test').addClass('check');
+
+                // $('#me > div > div.test').addClass('check');
+
+                // $('#me').find('.test').addClass('check');
+
+                // $('#me').prev().prev().addClass('check');
+
+                // $('#me').prev().addClass('check');
+
+                // $('#me').prevAll().addClass('check');
+
+                // $('#me').next().addClass('check');
+
+                // $('#me').next().next().addClass('check');
+
+                // $('#me').nextAll().addClass('check');
+
+                // $('#me').siblings().addClass('check');
+
+                // $('#me').parent().addClass('check');
+
+                // $('#me').parentsUntil('#div').addClass('check');
+
+                $('#me').parents().addClass('check');
+            });
+        </script>
+    </body>
+</html>
