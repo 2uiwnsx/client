@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex57_css</title>
+        <style>
+            .box {
+                width: 150px;
+                height: 150px;
+                background-color: gold;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box" class="box"></div>
+
+        <script>
+            const box = document.getElementById('box');
+
+            function isValid(event) {
+                let w = parseInt(window.getComputedStyle(box).width);
+                let h = parseInt(window.getComputedStyle(box).height);
+
+                if (((event.offsetX >= (w - 10)) && (event.offsetX <= w)) && ((event.offsetY >= (h - 10)) && (event.offsetY <= h))) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            let isDown = false;
+            
+            window.onmousedown = function () {
+                if ((event.target.id == 'box') && isValid(event)) {
+                    isDown = true;
+
+                    box.style.opacity = 0.3;
+                }
+            };
+
+            window.onmousemove = function () {
+                if (isDown) {
+                    box.style.width = event.clientX + 'px';
+                    box.style.height = event.clientY + 'px';
+                }
+            };
+
+            window.onmouseup = function () {
+                isDown = false;
+                
+                box.style.opacity = 1;
+            };
+        </script>
+    </body>
+</html>
