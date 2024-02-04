@@ -1,0 +1,76 @@
+body {
+    background-color: #E5E8E9;
+    margin: 0;
+}
+p {
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 1px dashed grey;
+    text-align: justify;
+}
+header {
+    color: #FFF;
+    background-color: #34495F;
+    padding: 10px;
+}
+header > div {
+    width: 1000px;
+    margin: 0 auto;
+}
+header h1 {
+    font-size: 1.5rem;
+    float: left;
+    margin: 0;
+}
+header > div > div {
+    float: right;
+    margin-top: 7px;
+}
+header > div > div > i {
+    margin-left: 20px;
+}
+header > div::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+section {
+    width: 1050px;
+    margin: 0 auto;
+}
+section .title {
+    background-color: white;
+    padding: 15px 15px 8px;
+}
+section .title div:first-child {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #87ACD1;
+}
+section .title div:last-child {
+    font-size: 0.8rem;
+    color: #555;
+}
+section .content {
+    column-count: 5;
+    padding: 20px;
+}
+section .content .item {
+    width: 150px;
+    background-color: white;
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #777;
+    margin: 0 auto 17px;
+    page-break-inside: avoid;
+}
+section .content .item img {
+    display: block;
+    box-shadow: -1px -1px 1px #555;
+    margin: 20px auto;
+}
+section .content .item .txt {
+    font-size: 14px;
+    color: #333;
+    margin: 0 12px 20px;
+}
