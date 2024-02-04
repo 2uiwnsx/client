@@ -1,0 +1,25 @@
+#box {
+    width: 400px;
+    height: 1000px;
+    border: 20px solid black;
+}
+#ball {
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation-name: key-ball;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes key-ball {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 900px);
+    }
+}
