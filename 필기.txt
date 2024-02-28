@@ -1,0 +1,50 @@
+▶ Apache Tomcat 설치
+
+	▷ https://tomcat.apache.org/download-90.cgi
+	▷ 64-bit Windows zip (pgp, sha512) 다운로드 및 압축 해제
+	
+▶ Visual Studio Code 설치
+
+	▷ https://code.visualstudio.com/#alt-downloads
+	▷ System Installer 다운로드
+	
+	▷ 플러그인 설치
+	
+		◆ Korean Language Pack for Visual Studio Code
+		
+		◆ Material Theme
+		
+		◆ Material Icon Theme
+		
+		◆ Live Server
+		
+			◇ ⚙ ➤ 바로 가기 키 ➤ extension.liveServer.goOnline 입력 ➤ 'Ctrl + F11' 조합으로 키 바인딩 변경
+		
+		◆ Auto Rename Tag
+		
+		◆ TabOut
+		
+		◆ Image preview
+		
+		◆ HTML to CSS autocompletion
+		
+		◆ HTML CSS Support
+		
+		◆ CSS Peek
+		
+		◆ HTML End Tag Labels
+		
+▶ Emmet 설치
+
+	▷ https://emmet.io/download
+	▷ Help ➤ Install New Software ➤ Add
+	
+		◆ Name : Emmet
+		◆ Location : http://download.emmet.io/eclipse/updates/
+		
+	▷ Window ➤ Preferences ➤ Emmet 입력 ➤ jsp 추가
+	
+▶ jQuery 다운로드
+
+	▷ https://releases.jquery.com
+	▷ jQuery Core 1.12.4 다른 이름으로 링크 저장
